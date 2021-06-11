@@ -1,0 +1,33 @@
+$rem: 20;
+$ffHuawei: 'Huawei', sans-serif;
+
+$color1: #272424;
+$color2: #AB103A;
+$color3: #BEBDBD;
+$color4: #DCDCDC;
+$color5: #ccc;
+
+$colorRed: #C7000B;
+$colorRedDarken: #AC000A;
+$colorRedAuthorized: #CE0E2D;
+
+$colorBlack:  #231815;
+$colorBlack3:  #181212;
+
+$colorGreyDark: #595757;
+$colorGrey: #9FA0A0;
+$colorGreyLight: #DCDDDD;
+
+$colorGreen: #62B230;
+$colorBlue: #30B5C5;
+
+
+
+$breakpoints: (
+  'xll': 1400px,
+  'xl': 1200px,
+  'lg': 992px,
+  'md': 768px,
+  'sm': 576px,
+  'xs': 320px
+);

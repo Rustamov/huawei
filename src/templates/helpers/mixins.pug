@@ -1,0 +1,30 @@
+mixin icon(name,mod)
+    if(mod)
+        svg(class="svg-icon svg-icon-" + name + ' ' + mod)
+            use(xlink:href="img/sprite/sprite/symbol/sprite.svg#" + name)
+    else
+        svg(class="svg-icon svg-icon-" + name)
+            use(xlink:href="img/sprite/symbol/sprite.svg#" + name)
+
+
+
+
+
+mixin tabs()
+  +b.UL.tabs&attributes(attributes)
+    block
+
+mixin tab()
+  +e.LI.tab&attributes(attributes)
+    block
+
+mixin tabs-content()
+  .tabs-content&attributes(attributes)
+    block
+
+mixin tab-wrapper()
+  .tabs-content__wrapper&attributes(attributes)
+    .tabs-content__wrapper-inner
+      block
+
+

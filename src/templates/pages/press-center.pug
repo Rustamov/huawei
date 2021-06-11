@@ -1,0 +1,247 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Пресс-центр"
+
+block content
+    main.main
+        +b.p-about
+            //- +pressSectionBanner
+            
+            +b.SECTION.s-common-banner
+                +e.IMG.img(src="img/press/press-banner.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title Пресс-центр
+                        +e.text
+                            p Контакты пресс-службы и материалы для СМИ
+
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs([], title)
+
+                    +e.H2.title Пресс-центр 
+
+
+                    +e.text-1.text
+                        p Пиар-служба компании Huawei Technologies в России рада делиться с вами актуальными новостями о развитии инфраструктуры, сетевого оборудования, технологий 5G и искусственного интеллекта (AI). 
+                            
+                +b.SECTION.s-pr-team
+                    +e.container.container
+                        +e.H2.title PR-команда
+
+                        +e.items
+                            +e.items-row.row
+                                +e.items-col.col-12.col-md-6.col-xl-4
+                                    +e.item
+                                        +e.item-img-wrap
+                                            +e.IMG.item-img(src="img/press/pr-team-0.jpg" alt="Юлия Ганина")
+                                        +e.item-main
+                                            +e.item-main-top
+                                                +e.SPAN.item-name Юлия Ганина
+                                                +e.SPAN.item-post Руководитель по связям со СМИ
+                                                +e.SPAN.item-company Компания Huawei в России
+                                            
+                                            +e.item-main-bottom
+                                                +e.SPAN.item-email
+                                                    | E-mail:
+                                                    +e.A.item-email-link(href="mailto:ganina.yulia@huawei.com")
+                                                        b ganina.yulia@huawei.com
+
+                                +e.items-col.col-12.col-md-6.col-xl-4
+                                    +e.item
+                                        +e.item-img-wrap
+                                            +e.IMG.item-img(src="img/press/pr-team-1.jpg" alt="Виктория Халанская")
+                                        +e.item-main
+                                            +e.item-main-top
+                                                +e.SPAN.item-name Виктория Халанская
+                                                +e.SPAN.item-post Менеджер по связям с общественностью
+                                                +e.SPAN.item-company Компания Huawei в России
+                                            
+                                            +e.item-main-bottom
+                                                +e.SPAN.item-email
+                                                    | E-mail:
+                                                    +e.A.item-email-link(href="mailto:khalanskaya.victoria@huawei.com")
+                                                        b khalanskaya.victoria@huawei.com
+
+                                +e.items-col.col-12.col-md-6.col-xl-4
+                                    +e.item
+                                        +e.item-img-wrap
+                                            +e.IMG.item-img(src="img/press/pr-team-2.jpg" alt="Анастасия Курбатова")
+                                        +e.item-main
+                                            +e.item-main-top
+                                                +e.SPAN.item-name Анастасия Курбатова
+                                                +e.SPAN.item-post Менеджер по связям с общественностью
+                                                +e.SPAN.item-company Компания Huawei в России
+                                            
+                                            +e.item-main-bottom
+                                                +e.SPAN.item-email
+                                                    | E-mail:
+                                                    +e.A.item-email-link(href="mailto:kurbatova.anastasia@huawei.com ")
+                                                        b kurbatova.anastasia@huawei.com 
+
+
+                +b.SECTION.s-press-report
+                    +e.container.container
+
+                        +e.row
+                            +e.col-img
+                                +e.img-wrap.--desktop
+                                    +e.IMG.img(src="img/press/report-main.png" alt="Годовой отчет за 2019 год")
+
+                            +e.col-main
+                                +e.item-main
+                                    +e.H2.title Годовой отчет за 2019 год
+
+                                    +e.img-wrap.--content
+                                        +e.IMG.img(src="img/press/report-main.png" alt="Годовой отчет за 2019 год")
+
+                                    +e.text.text
+                                        p 2019 год стал для Huawei исключительным. Несмотря на колоссальное давление извне, наша команда   уверенно двигалась вперед, сосредоточившись исключительно на том, чтобы   приносить больше пользы клиентам.
+                                        p Мы стоим на пороге   интеллектуальной эры, которая принесет нам новые трудности и откроет новые   возможности.
+                                        p Наше видение и миссия состоят   в том, чтобы открыть цифровые технологии каждому человеку, дому и организации   и таким образом построить полностью подключенный интеллектуальный мир.
+                                        p Для претворения этой цели в   жизнь мы продолжим сосредотачивать усилия на развитии инфраструктуры ИКТ и   умных устройств, открыто сотрудничая с партнерами по вопросам цифровой и   интеллектуальной трансформации отраслей. Вместе мы принесем большую пользу   нашим клиентам и обществу, предоставив преимущества цифровых технологий   каждому человеку.
+                                    
+                                    +e.signature
+                                        +e.P.signature-img
+                                            img(src="img/press/report-content-0.png" alt="Действующий Председатель Huawei Сюй Чжицзюнь")
+                                        +e.P.signature-text
+                                            | Действующий Председатель Huawei 
+                                            br
+                                            | Сюй Чжицзюнь
+
+                                    +e.buttons
+                                        +e.A.download-btn.btn.--geom-lg.--theme-red-transparent(href="file.pdf" download)
+                                            +icon('download')
+                                            span Скачать отчёт в pdf
+
+                                            
+                +b.SECTION.s-press-media
+                    +e.container.container
+                        +e.H2.title Медиатека
+
+                        +e.items
+                            +e.items-row.row
+                                +e.items-col.col-12.col-sm-4
+                                    +e.item
+                                        +e.item-top
+                                            +e.item-img-wrap
+                                                +e.SPAN.item-img-inner
+                                                    +e.IMG.item-img(src="img/press/media-icon-0.svg" alt="Images")
+                                            +e.SPAN.item-name Images
+
+                                        +e.item-main
+                                            +e.SPAN.item-text.text
+                                                p Поясняющий текст, рассказывающий для чего эта страница и что делать.
+
+                                            +e.A.item-arrow(href="#" target="_blanck")
+                                                +icon('arrow-right-big')
+
+                                            
+                                        +e.item-buttons
+                                            +e.A.item-link.btn.--geom-def.--theme-red-transparent(href="#" target="_blanck") Открыть
+
+                                +e.items-col.col-12.col-sm-4
+                                    +e.item
+                                        +e.item-top
+                                            +e.item-img-wrap
+                                                +e.SPAN.item-img-inner
+                                                    +e.IMG.item-img(src="img/press//media-icon-1.svg" alt="Videos")
+                                            +e.SPAN.item-name Videos
+
+                                        +e.item-main
+                                            +e.SPAN.item-text.text
+                                                p Поясняющий текст, рассказывающий для чего эта страница и что делать.
+
+                                            +e.A.item-arrow(href="#" target="_blanck")
+                                                +icon('arrow-right-big')
+                                            
+                                        +e.item-buttons
+                                            +e.A.item-link.btn.--geom-def.--theme-red-transparent(href="#" target="_blanck") Открыть
+
+                                +e.items-col.col-12.col-sm-4
+                                    +e.item
+                                        +e.item-top
+                                            +e.item-img-wrap
+                                                +e.SPAN.item-img-inner
+                                                    +e.IMG.item-img(src="img/press//media-icon-2.svg" alt="Infographics")
+                                            +e.SPAN.item-name Infographics
+
+                                        +e.item-main
+                                            +e.SPAN.item-text.text
+                                                p Поясняющий текст, рассказывающий для чего эта страница и что делать.
+
+                                            +e.A.item-arrow(href="#" target="_blanck")
+                                                +icon('arrow-right-big')
+                                            
+                                        +e.item-buttons
+                                            +e.A.item-link.btn.--geom-def.--theme-red-transparent(href="#" target="_blanck") Открыть
+
+
+                +b.SECTION.s-press-style
+                    +e.container.container
+                        +e.H2.title Фирменный стиль компании Huawei
+
+                        +e.items
+                            +e.items-row.row
+                                +e.items-col.col-12.col-md-6
+                                    +e.item
+                                        +e.item-img-wrap
+                                            picture
+                                                source(srcset="img/press/style-0-sm.jpg" media="(max-width: 576px)")
+                                                +e.IMG.item-img(srcset="img/press/style-0.jpg" alt="Логотип")
+                                                
+                                        +e.item-main
+                                            +e.H3.item-name
+                                                +e.SPAN.item-name-inner Логотип
+                                            +e.item-text.text
+                                                p Поясняющий текст, рассказывающий для чего эта страница и что делать. На сегодняшний день 92 оператора мобильной связи по всему миру уже развернули коммерческие сети 5G.
+                                            
+                                            +e.item-buttons
+                                                +e.A.item-link.btn.--geom-def.--theme-red-transparent(href="file.pdf" download) Скачать логотипы 
+
+                                +e.items-col.col-12.col-md-6
+                                    +e.item
+                                        +e.item-img-wrap
+                                            picture
+                                                source(srcset="img/press/style-1-sm.jpg" media="(max-width: 576px)")
+                                                +e.IMG.item-img(srcset="img/press/style-1.jpg" alt="Логотип")
+                                        +e.item-main
+                                            +e.H3.item-name
+                                                +e.SPAN.item-name-inner Брендбук
+                                            +e.item-text.text
+                                                p Поясняющий текст, рассказывающий для чего эта страница и что делать. На сегодняшний день 92 оператора мобильной связи по всему миру уже развернули коммерческие сети 5G.
+                                            
+                                            +e.item-buttons
+                                                +e.A.item-link.btn.--geom-def.--theme-red-transparent(href="file.pdf" download) Скачать гайдлайны
+
+
+                +b.SECTION.s-press-about
+                    +e.container.container
+                        +e.H2.title О компании Huawei
+
+                        +e.row
+                            +e.col-img
+                                +e.img-wrap
+                                    +e.IMG.img(src="img/press/about-main.png" alt="О компании Huawei")
+
+                            +e.col-main
+                                +e.text.text
+                                    p Компания Huawei – ведущий мировой поставщик инфокоммуникационных и инфраструктурных решений, а также умных устройств. Основные направления ее работы – телекоммуникационные сети, информационные технологии, умные устройства и облачные сервисы, при этом Huawei стремится сделать цифровые технологии доступными как для бизнеса, так и для конечных потребителей, тем самым приближая создание интеллектуального, совершенного мира связи.
+                                    p Продукты, решения и сервисы из комплексного портфолио Huawei обладают высокой надежностью и конкурентоспособностью. Открыто сотрудничая с партнерами по экосистеме, Huawei создает коммерческий потенциал для своих клиентов, расширяя спектр их возможностей.
+                                    p Huawei направляет значительную часть инвестиций на проведение фундаментальных исследований, способствующих мировому прогрессу. В компании работает более 188 тыс. сотрудников в 170 с лишним странах мира. Huawei – частная компания, основанная в 1987 году. Она полностью находится в собственности сотрудников.
+                                
+                                +e.buttons.row
+                                    +e.buttons-item.col-auto 
+                                        +e.A.link.btn.--geom-lg.--theme-red(href="#") Пресс-релизы
+                                    +e.buttons-item.col-auto
+                                        +e.A.link.btn.--geom-lg.--theme-red-transparent(href="#") Узнать больше
+
+
+    +sectionFeedback
+
+
+

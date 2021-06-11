@@ -1,0 +1,215 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Партнеры по продажам"
+
+block content
+    main.main
+        +b.p-partners
+            //- +partnersPolicySectionBanner
+            
+            +b.SECTION.s-common-banner.--light
+                +e.IMG.img(src="img/partners/partners-policy-banner.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title Партнеры по продажам
+                        +e.text
+                            p Разделите наш успех!
+                        +e.buttons.row
+                            +e.buttons-item.col-auto 
+                                +e.A.link.btn.--geom-lg.--theme-red(href="#") Стать Партнером
+                            +e.buttons-item.col-auto
+                                +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                                    +icon('download')
+                                    span Условия и преимущества
+
+
+            +e.main
+                .container
+                    .breadcrumbs-block   
+                        +breadcrumbs([], title)
+                    .text-block
+                        .s-partners-steps__title.H2 Стать партнером
+                        //- p Вместе с нашими партнерами по продажам мы работаем над созданием новой экосистемы, занимаясь продвижением товаров, решений и
+                        //-     br
+                        //-     | услуг компании Huawei клиентам на принципах взаимной выгоды. Наша партнерская программа предлагает ряд преимуществ и бонусов.
+
+                    +partnersSectionRefgisterSteps
+
+                    .text-block
+                        .s-partners-steps__title.H2 Требования к партнерам по продажам
+                        p Согласно условиям партнерской программы евразийского подразделения корпоративных решений Huawei,
+                            br
+                            | авторизованные партнеры и партнеры более высоких статусов должны соответствовать описанным ниже требованиям
+
+                    +b.partners-bonus-table.--first
+                        .table-wrap
+                            table
+                                thead
+                                    tr
+                                        th Регион
+                                        th Партнеры CFT
+                                        th(width="20%") Минимальный объем продаж, USD
+                                        th(width="25%") Сертификация pre-sales
+                                        th(width="30%") Сервисная сертификация
+                                tbody
+                                    tr
+                                        th(colspan='1' rowspan='4'  style="text-align:center" width="10%" )
+                                            b Россия
+                                        td VAP
+                                        td 8 млн.
+                                        td 5 HCPP
+                                        td CSP 4 (любая линейка оборудования)
+                                    tr
+                                        td Золотой
+                                        td 1,3 млн.
+                                        td 2 HCPP
+                                        td CSP 3 (любая линейка оборудования)
+                                    tr
+                                        td Серебряный
+                                        td 325 тыс.
+                                        td 1 HCPP
+                                        td ---
+                                    tr
+                                        td Авторизированный
+                                        td Размещение заказа на поставку в течение года
+                                        td ---
+                                        td ---
+                                    tr
+                                        th(colspan='1' rowspan='4'  style="text-align:center" width="10%")
+
+                                            b Евразия
+                                                br
+                                                | (без РФ)
+                                        td VAP
+                                        td 2 млн.
+                                        td 3 HCPP
+                                        td CSP 3 (любая линейка оборудования)
+                                    tr
+                                        td Золотой
+                                        td 0,5 млн.
+                                        td 2 HCPP
+                                        td CSP 3 (любая линейка оборудования)
+                                    tr
+                                        td Серебряный
+                                        td 250 тыс.
+                                        td 1 HCPP
+                                        td ---
+                                    tr
+                                        td Авторизированный
+                                        td Размещение заказа на поставку в течение года
+                                        td ---
+                                        td ---
+
+                    +b.partners-bonus-download.--first
+                        +e.A.link.btn.--geom-lg.--theme-red-transparent(href="file.pdf" download)
+                            +icon('download')
+                            span Скачать таблицу в pdf
+
+                    br
+                    br
+                    .text-block
+                        .s-partners-steps__title.H2 Бонусная программа
+                        p В течение каждого квартала Huawei ведет подсчет бонусов, заработанных партнером. Формула расчета зависит от статуса
+                            br
+                            | партнера. Этими бонусами партнер может воспользоваться, выполнив все поставленные задачи.
+
+                    +b.partners-bonus-table.--second
+                        .table-wrap
+                            table
+                                thead
+                                    tr
+                                        th(colspan='1' rowspan='2') Регион
+                                        th(colspan='1' rowspan='2') Статус партнера
+                                        th(colspan='1' rowspan='2' width='15%' style="text-align:center") Скидка по 100% предоплате
+                                        th(colspan='2' rowspan='1' width='25%' style="text-align:center") Бонус
+                                        th(rowspan='1' width='30%' style="text-align:center") Маркетинговая поддержка
+                                    tr
+                                        th(width='25%' style="text-align:center") Стандартный бонус
+                                        th(width='30%' style="text-align:center") Бонус за квалификацию
+                                            br
+                                            |специалистов
+                                        th(width='30%' style="text-align:center" ) JMF
+                                tbody
+                                    tr
+                                        th(colspan='1' rowspan='4' style=' text-align:center' width='10%')
+                                            b Россия
+                                        td VAP
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                    tr
+                                        td Золотой
+                                        td
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                    tr
+                                        td Серебряный
+                                        td
+                                        td
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td
+                                    tr
+                                        td Авторизированный
+                                        td
+                                        td
+                                        td
+                                        td
+                                    tr
+                                        th(colspan='1' rowspan='4' style=' text-align:center' width='10%')
+                                            b
+                                                | Евразия
+                                                br
+                                                | (без РФ)
+                                        td VAP
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                    tr
+                                        td Серебряный
+                                        td
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                    tr
+                                        td Золотой
+                                        td
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td(style="text-align:center")
+                                            img(src="../img/partners/check.svg")
+                                        td
+                                    tr
+                                        td Авторизированный
+                                        td
+                                        td
+                                        td
+                                        td
+                        
+                    +b.partners-bonus-download.--second
+                        +e.A.link.btn.--geom-lg.--theme-red-transparent(href="file.pdf" download)
+                            +icon('download')
+                            span Скачать таблицу в pdf
+
+        +sectionFeedback
+            
+
+

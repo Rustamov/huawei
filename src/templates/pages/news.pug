@@ -1,0 +1,128 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Новости"
+
+block content
+    main.main
+        +b.p-news
+            //- +newsSectionBanner
+            +b.SECTION.s-common-banner
+                +e.IMG.img(src="img/content/news-banner.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title Новости
+                        +e.text.text
+                            p Узнавайте последние новости о компании из первых рук
+                        //- +e.link-wrap
+                        //-     +e.A.link.btn.--geom-lg.--theme-red(href="#") Читать полностью
+
+
+            +e.main
+                .container
+                    +e.breadcrumbs.breadcrumbs-block
+                        +breadcrumbs([], title)
+
+                    +e.listing
+                        +e.row.row
+                            +e.listing-col-items.col-12.col-lg-8.col-xl-9
+                                +e.items
+                                    +e.items-row.row
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-0.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210',
+                                                '#Публикация'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-1.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210',
+                                                '#Интервью'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-2.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210',
+                                                '#Пресс-релиз'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-3.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210'
+                                            )
+
+                                        
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/content/news-listing-empty.png', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210',
+                                                '#Отчет'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-0.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210'
+                                            )
+
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-4.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-5.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210'
+                                            )
+
+                                        +e.items-col.col-12.col-sm-6.col-xl-4
+                                            +newsListingItem(
+                                                'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                                                'img/temp/news-listing-3.jpg', 
+                                                '18.08.2020', 
+                                                '320',
+                                                '210'
+                                            )
+
+                            +e.listing-col-filter.col-12.col-lg-4.col-xl-3
+                                +newsFilter
+
+                    +e.pagination
+                        +newsPagination
+
+        +sectionFeedback
+            
+
+

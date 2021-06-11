@@ -1,0 +1,37 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Поиск"
+
+block content
+    main.main
+        +b.p-search
+            +e.main
+                .container
+                    form(action="#" method="post" )
+                        +e.fields-col.search-wrap
+                            span.input-text-wrap
+                                input.search-input(type="text" placeholder="Поиск")
+                                button(type="submit").search-btn
+                                    +icon('search-2')
+                    +e.count 3/3
+                    +e.results
+                        +e.A(href="javascript:void(0)").results-card
+                            .result-title   Гетерогенные серверы FusionServer серии &nbsp;
+                                span.red G &nbsp;
+                                |─ продукты Huawei
+                            .result-desc   Гетерогенные серверы FusionServer серии
+                                span.red  G
+                            .result-date 2017/10/25
+                        +e.A(href="javascript:void(0)").results-card
+                            .result-title   Гетерогенные серверы FusionServer серии &nbsp;
+                                span.red G &nbsp;
+                                | ─ продукты Huawei
+                            .result-desc   Гетерогенные серверы FusionServer серии
+                                span.red  G
+                            .result-date 2017/10/25
+
+            
+
+

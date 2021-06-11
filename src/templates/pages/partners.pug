@@ -1,0 +1,158 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Партнерство"
+
+block content
+    main.main
+        +b.p-partners
+            //- +partnersSectionBanner
+            
+            +b.SECTION.s-common-banner.--light
+                +e.IMG.img(src="img/partners/partners-banner.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title Открытость, Сотрудничество, Взаимовыгода
+                        +e.text.text
+                            p Создаем ценности для клиентов вместе
+                        +e.links-wrap
+                            +e.A.link.btn.--geom-lg.--theme-transparent(href="#") Стать Партнером
+
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs([], title)
+                     
+                    //- +e.H1.title Станьте нашим партнером
+                    +e.H2.sec-title Станьте нашим партнером
+
+                    
+                    +e.items
+                        +e.items-row.row
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Партнеры по продажам', 
+                                    'Партнеры, занимающиеся продвижением на рынок продуктов, решени и услуг компании Huawei, а также выступающие посредниками в их продаже', 
+                                    'img/partners/partners-listing-0.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Партнеры по совместным решениям', 
+                                    'Независимые поставщики ПО, АО, а также, консалтинговые компании, сотрудничающие с Huawei в разработке, создании, продаже решений, и занимающиеся системной интеграцией. ', 
+                                    'img/partners/partners-listing-1.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Сертифицированные сервисные партнеры', 
+                                    'Партнеры, сотрудничающиеся с Huawei в реализации и послепродажном обслуживании сервисных решений', 
+                                    'img/partners/partners-listing-2.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Партнеры по обучению (HALP)', 
+                                    'Организации профессионального обучения, уполномоченные предоставлять учебные программы по сертификации на основании договора с Huawei ', 
+                                    'img/partners/partners-listing-3.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Партнеры по обучению (ИКТ Academy Huawei)', 
+                                    'Образовательные центры, сотрудничающие с Huawei в обучении и подготовке ИКТ-персонала', 
+                                    'img/partners/partners-listing-4.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Партнеры по финансовым операциям', 
+                                    'Финансовые организации, которые предоставляют партнерам по продажам ряд конкурентных преимуществ касательно процентной ставки и гибкости условий при приобретении, продуктов, решений и услуг компании Huawei', 
+                                    'img/partners/partners-listing-5.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Социальные партнеры', 
+                                    'Организации стандартизации, отраслевые ассоциации и исследовательские институты, помогающие повысить узнаваемость бренда и влияние Huawei в соответствующих отраслях', 
+                                    'img/partners/partners-listing-6.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4.col-xl-3
+                                +partnersListingItem(
+                                    'Индустриальные партнеры', 
+                                    'Партнеры, занимающиеся предоставлением коммерческих сервисных решений на базе компонентов Huawei, таких как Kunpeng и цифровые платформы', 
+                                    'img/partners/partners-listing-7.jpg', 
+                                    '320',
+                                    '268',
+                                    '#',
+                                    '#'
+                                )
+
+
+                    +e.H2.sec-title Kunpeng & Shengteng area
+                               
+                    +e.programs
+                        +e.programs-row
+                            +e.programs-col
+                                +partnersProgramListingItem(
+                                    'Партнерская программа по Kunpeng', 
+                                    'Партнерская программа направлена на создание новой экосистемы Kunpeng. В рамках программы  наши партнеры смогут ближе познакомиться с сервером TaiShan и облачными сервисами Kunpeng Cloud и получить маркетинговую, техническую и другие виды поддержки.', 
+                                    'img/partners/partners-progrmas-0.png', 
+                                    '98',
+                                    '88',
+                                    '#',
+                                    '/partnersKunpeng.html'
+                                )  
+
+                            +e.programs-col
+                                +partnersProgramListingItem(
+                                    'Партнерская программа по Ascend', 
+                                    'В рамках партнерской программы Ascend мы помогаем нашим партнерам адаптироваться к вычислительной платформе Atlas, предоставляем тренинговую, техническую и маркетинговую поддержку, таким образом, формируя новую экосистему Ascend', 
+                                    'img/partners/partners-progrmas-0.png', 
+                                    '98',
+                                    '88',
+                                    '#',
+                                    '/partnersAscend.html'
+                                )  
+                    
+                +partnersSectionCooperation
+
+                +partnersSectionNews
+
+
+        
+        +sectionFeedback
+            
+
+

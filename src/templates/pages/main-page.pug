@@ -1,0 +1,890 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Главная"
+
+block content
+    main.main
+
+        +b.s-main-banners
+            +e.slider-wrap
+                +e.slider.js-main-banners-slider
+                    +e.slider-item
+                        +b.SECTION.s-common-banner-2.--dark-dawn
+                            picture
+                                source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider1.jpg" alt="Создаем полностью взаимосвязанный интеллектуальный мир")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.title Создаем полностью взаимосвязанный интеллектуальный мир
+                                    +e.text.text
+                
+                    +e.slider-item
+                        +b.SECTION.s-common-banner-2.--dark-dawn
+                            picture
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider2-new.jpg" alt="Строим сообщество единого цифрового будущего")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.title Строим сообщество единого цифрового будущего
+                                    +e.text.text Создаем полностью взаимосвязанный интеллектуальный мир
+
+                                +e.buttons.row
+                                    +e.buttons-item.col-auto 
+                                        +e.A.link.btn.--geom-def.--theme-grey-black-transparent(href="#") Узнать больше
+                    
+                    +e.slider-item                                
+                        +b.SECTION.s-common-banner-2.--dark-dawn.--light
+                            picture
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider3.jpg" alt="HUAWEI CONNECT MOSCOW")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.title HUAWEI CONNECT MOSCOW
+                                    +e.text.text  Мероприятие • 30 сентября—2 октября
+
+                                +e.buttons.row
+                                    +e.buttons-item.col-auto
+                                        +e.A.link.btn.--geom-def.--theme-transparent(href="#") Узнать больше
+
+            +e.controls
+                +e.controls-left
+                    +b.A.BUTTON.btn-arrow-2.--right.js-items-slider-prev(href="#")
+                        +icon('arrow-left-slider')
+
+                +e.controls-right
+                    +b.A.BUTTON.btn-arrow-2.--right.js-items-slider-next(href="#")
+                        +icon('arrow-right-slider')
+                                        
+        .section-about
+            .container
+                .section-about__welcome
+                    h1.section-about__welcome-title
+                        span Сообщество
+                        |  единого цифрового будущего
+                    .section-about__welcome-text
+                        | 5G, AI, облачные и другие информационно-коммуникационные технологии стали мотором цифровизации, пришедшей вместе
+                        | с Четвертой промышленной революцией. Приход данных технологий ознаменовывает новый прогрессивный этап в развитии ИКТ-отрасли 
+                        | в России. Мы надеемся вместе с нашими партнерами воспользоваться этой возможностью для формирования Сообщества единого цифрового будущего, создавая новые возможности для цифровизации всех отраслей экономики России и генерируя безопасную экосистему.
+                .section-about__blocks
+                    .section-about__blocks-merits
+                        a.section-about__blocks-merit.section-about__blocks-merit_middle.hover__img-scale.pr(href="https://www.huawei.com/ru/news/ru/2020/huawei_drweb_taishan_servers " target="_blank")
+                            .img__wrap
+                                .img.dark-bg(style="background-image: url(img/main-page/section-about/about4.png); background-size: contain;")
+                            span.new__inner
+                                | Dr.Web
+                                | расширяет аудиторию благодаря поддержке серверов TaiShan на платформе ARM64 от Huawei
+                        a.section-about__blocks-merit.section-about__blocks-merit_small.hover__img-scale.pr(href="https://www.huawei.com/ru/news/ru/2020/jetinfosytems_huawei_reference_center" target="_blank")
+                            .img__wrap
+                                .img.dark-bg(style="background-image: url(img/main-page/section-about/about1.jpg); background-size: cover;")
+                            span.new__inner
+                                | «Инфосистемы
+                                | Джет» построили эталонную инфраструктуру на решениях Huawei
+                        a.section-about__blocks-merit.section-about__blocks-merit_small.hover__img-scale.pr(href="https://www.huawei.com/ru/news/ru/2020/huawei_red_soft_agreement" target="_blank")
+                            .img__wrap
+                                .img.dark-bg(style="background-image: url(img/main-page/section-about/about2.png); background-size: cover;")
+                            span.new__inner
+                                | Huawei
+                                | совместится с «Ред ОС»: российскую операционную систему установят на серверы китайской
+                                | компании
+                        a.section-about__blocks-merit.section-about__blocks-merit_small.hover__img-scale.pr(href="https://www.huawei.com/ru/news/ru/2020/huawei_kunpeng_tionix_cloud_russia" target="_blank")
+                            .img__wrap
+                                .img.dark-bg(style="background-image: url(img/main-page/section-about/about3.png); background-size: cover;")
+                            span.new__inner
+                                | Сбербанк
+                                | и Huawei предложили российским клиентам уникальные облачные решения
+                        a.section-about__blocks-merit.section-about__blocks-merit_small.hover__img-scale.pr(href="https://www.huawei.com/ru/news/ru/2020/huawei_beeline_belaz_5g_mining_case" target="_blank")
+                            .img__wrap
+                                .img.dark-bg(style="background-image: url(img/main-page/section-about/about5.JPG); background-size: cover;")
+                            span.new__inner
+                                | Беспилотные
+                                | БелАЗы в карьере: Билайн и Huawei показали будущее угольной отрасли c 5G
+                    
+                    a.button.section-about__button.section-about__button_all-news.center(href="javascript:void(0)")
+                        | все новости
+
+                    .section-about__blocks-slider
+                        .swiper
+                            .swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle партнеры по продажам
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle
+                                                | партнеры по совместным
+                                                | решениям
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle
+                                                | сертифицированные сервисные
+                                                | партнеры
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle
+                                                | партнеры по обучению (HALP)
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle
+                                                | партнеры по обучению (ИКТ
+                                                | Academy Huawei)
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle
+                                                | партнеры по финансовым
+                                                | операциям
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle социальные партнеры
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                                    .swiper-slide
+                                        .section-about__blocks-slider-slide
+                                            .section-about__blocks-slider-suptitle индустриальные партнеры
+                                            a.section-about__blocks-slider-text(href="javascript:void(0)")
+                                                | Наличие
+                                                | сертификата,
+                                                | подтверждающего партнёрский статус
+                                                .btn__more-wrap
+                                                    .btn__more Узнать больше
+                                            .section-about__blocks-slider-empty
+                            .swiper-pagination
+               
+                .section-about__buttons
+                    a.button.section-about__button.section-about__button_middle.section-about__button_hide-md.section-about__button_margin32.center(href="javascript:void(0)")
+                        | все новости
+                    a.button.section-about__button.section-about__button_small.center(href="javascript:void(0)")
+                        | Узнать
+                        | о партнёрстве
+
+        +b.s-main-consumer
+            .container
+                +e.top
+                    +e.H2.title Экосистема мобильных устройств
+
+                +e.row
+                    +e.col
+                        +e.slider.js-main-consumer-slider
+                            +e.slider-item
+                                +b.s-main-consumer-video
+                                    +e.IMG.img(src="/img/main-page/consumer/video-0.jpg")
+                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                        +e.SPAN.play-btn.btn-play-round
+                                            +icon('play-triangle-lg')
+
+                            +e.slider-item
+                                +b.s-main-consumer-video
+                                    +e.IMG.img(src="/img/main-page/consumer/video-1.jpg")
+                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                        +e.SPAN.play-btn.btn-play-round
+                                            +icon('play-triangle-lg')
+                                
+                            +e.slider-item
+                                +b.s-main-consumer-video
+                                    +e.IMG.img(src="/img/main-page/consumer/video-0.jpg")
+                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                        +e.SPAN.play-btn.btn-play-round
+                                            +icon('play-triangle-lg')
+
+                            +e.slider-item
+                                +b.s-main-consumer-video
+                                    +e.IMG.img(src="/img/main-page/consumer/video-1.jpg")
+                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                        +e.SPAN.play-btn.btn-play-round
+                                            +icon('play-triangle-lg')
+
+                    +e.col
+                        +e.slider.js-main-consumer-slider
+                            +e.slider-item
+                                +b.s-main-consumer-product
+                                    +e.title
+                                        img(src="/img/main-page/consumer/product-0-title.svg" alt="HUWWEI MateBook X")
+                                    +e.descr.text
+                                        p 
+                                            | Ультралегкий – всего 1 кг
+                                        p
+                                            | Бесконечный
+                                            br
+                                            | безрамочный 3К-экран
+                                        p
+                                            | Huawei Share объединяет
+                                            br
+                                            | ноутбук и смартфон
+                                    +e.buttons
+                                        +e.buttons-item
+                                            +b.A.btn.--geom-def.--theme-grey-md-transparent(href="#") Узнать больше
+                                        +e.buttons-item
+                                            +b.A.btn-play.--geom-def.--theme-grey-md-transparent.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                +icon('play-triangle')
+
+                                    +e.A.img-wrap.js-rellax(href="#" target="_blank" data-rellax-speed="0.8")
+                                        +e.IMG.img(src="/img/main-page/consumer/product-0.png")                        
+
+                            +e.slider-item
+                                +b.s-main-consumer-product
+                                    +e.title
+                                        img(src="/img/main-page/consumer/product-1-title.svg" alt="HUWWEI MateBook X")
+                                    +e.descr.text
+                                        p
+                                            | 2 недели без подзарядки
+                                        p 
+                                            | Сапфировое стекло,
+                                            br
+                                            | титановый корпус
+                                        p
+                                            | Гольф, лыжи и плавание
+                                            br
+                                            | (5 АТМ), более 100 
+                                            | режимов тренировок
+                                    +e.buttons
+                                        +e.buttons-item
+                                            +b.A.btn.--geom-def.--theme-grey-md-transparent(href="#") Узнать больше
+                                    +e.A.img-wrap.js-rellax(href="#" target="_blank" data-rellax-speed="0.8")
+                                        +e.IMG.img(src="/img/main-page/consumer/product-1.png")                        
+
+                            +e.slider-item
+                                +b.s-main-consumer-product
+                                    +e.title
+                                        img(src="/img/main-page/consumer/product-2-title.svg" alt="HUWWEI MateBook X")
+                                    +e.descr.text
+                                        p 
+                                            | Динамическое шумоподавление
+                                        p
+                                            | Режимы звукопроницаемости
+                                            br
+                                            | и усиления голоса
+                                        p
+                                            | Одновременное
+                                            br
+                                            | подключение к двум
+                                            br
+                                            | устройствам
+                                    +e.buttons
+                                        +e.buttons-item
+                                            +b.A.btn.--geom-def.--theme-grey-md-transparent(href="#") Узнать больше
+                                    +e.A.img-wrap.js-rellax(href="#" target="_blank" data-rellax-speed="0.8")
+                                        +e.IMG.img(src="/img/main-page/consumer/product-2.png")
+
+                    +e.col
+                        +e.slider.js-main-consumer-slider
+                            +e.slider-item
+                                +b.A.s-main-consumer-item-img(href="#" target="_blank")
+                                    +e.IMG.img(src="/img/main-page/consumer/item-img-0.jpg")
+
+                            +e.slider-item
+                                +b.s-main-consumer-item-custom
+                                    +b.s-main-consumer-services
+                                        +e.row
+                                            +e.col
+                                                +e.A.item(href="#" target="_blank")
+                                                    +e.IMG.item-img(src="/img/main-page/consumer/custom-0.png" alt="HUAWEI MOBILE CLOUD")
+                                                    +e.SPAN.item-title HUAWEI MOBILE CLOUD
+                                        
+                                            +e.col
+                                                +e.A.item(href="#" target="_blank")
+                                                    +e.IMG.item-img(src="/img/main-page/consumer/custom-1.png" alt="HUAWEI APPGALLERY")
+                                                    +e.SPAN.item-title HUAWEI APPGALLERY
+                                        
+                                            +e.col
+                                                +e.A.item(href="#" target="_blank")
+                                                    +e.IMG.item-img(src="/img/main-page/consumer/custom-2.png" alt="ТЕМЫ HUAWEI")
+                                                    +e.SPAN.item-title ТЕМЫ HUAWEI
+                                        
+                                            +e.col
+                                                +e.A.item(href="#" target="_blank")
+                                                    +e.IMG.item-img(src="/img/main-page/consumer/custom-3.png" alt="Video HUAWEI")
+                                                    +e.SPAN.item-title Video HUAWEI
+                                                
+        +b.s-main-hddc
+            .container
+                +e.top
+                    +e.H2.title Итоги конференции «цифровое сообщество 2020»
+                    +e.A.top-link(href="#" target="_blank") Все материалы
+
+                +e.videos
+                    +e.group
+                        +e.group-row
+                            +e.group-col.--wbig-1
+                                +b.s-main-hddc-video.--big
+                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                    +e.SPAN.title.--big Название выступления в данном видео
+                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                        +e.SPAN.play-btn.btn-play-round
+                                            +icon('play-triangle-lg')
+
+                            +e.group-col.--wsmall-1
+                                +e.group-scroll-wrap
+                                    +e.group-scroll
+                                        +e.group-row.row
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+                                            +e.group-col.col-12.col-sm-6.col-lg-12
+                                                +b.s-main-hddc-video.--small
+                                                    +e.IMG.img(src="/img/main-page/hddc/poster.jpg")
+                                                    +e.SPAN.title.--small Название выступления в данном видео
+                                                    +e.A.play.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4")
+                                                        +e.SPAN.play-btn.btn-play-round.--geom-sm
+                                                            +icon('play-triangle-lg')
+
+        +b.s-main-banners
+            +e.slider-wrap
+                +e.slider.js-main-banners-slider
+                    +e.slider-item
+                        +b.SECTION.s-common-banner-2.--dark-dawn
+                            picture
+                                source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider1.jpg" alt="Создаем полностью взаимосвязанный интеллектуальный мир")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.H2.title Создаем полностью взаимосвязанный интеллектуальный мир
+                                    +e.text.text
+                
+                    +e.slider-item
+                        +b.SECTION.s-common-banner-2.--dark-dawn
+                            picture
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider2-new.jpg" alt="Строим сообщество единого цифрового будущего")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.H2.title Строим сообщество единого цифрового будущего
+                                    +e.text.text Создаем полностью взаимосвязанный интеллектуальный мир
+
+                                +e.buttons.row
+                                    +e.buttons-item.col-auto 
+                                        +e.A.link.btn.--geom-def.--theme-grey-black-transparent(href="#") Узнать больше
+                    
+                    +e.slider-item                                
+                        +b.SECTION.s-common-banner-2.--dark-dawn.--light
+                            picture
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-xl.jpg" media="(max-width: 1200px) and (min-width: 992px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-lg.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                                //- source(srcset="img/main-page/slider-banner/header-slider1-sm.jpg" media="(max-width: 576px)")
+
+                                +e.IMG.img(srcset="img/main-page/slider-banner/header-slider3.jpg" alt="HUAWEI CONNECT MOSCOW")
+        
+                            +e.container.container
+                                +e.box
+                                    +e.H2.title HUAWEI CONNECT MOSCOW
+                                    +e.text.text  Мероприятие • 30 сентября—2 октября
+
+                                +e.buttons.row
+                                    +e.buttons-item.col-auto
+                                        +e.A.link.btn.--geom-def.--theme-transparent(href="#") Узнать больше
+
+            +e.controls
+                +e.controls-left
+                    +b.A.B.btn-arrow-2.--right.js-items-slider-prev(href="#")
+                        +icon('arrow-left-slider')
+
+                +e.controls-right
+                    +b.A.B.btn-arrow-2.--right.js-items-slider-next(href="#")
+                        +icon('arrow-right-slider')
+
+        .news-activity
+            .container
+                .section-title
+                    .section-title__title Новости и мероприятия в России
+                    .section-title__category
+                .news-activity__inner
+                    .news-activity__activity
+                        .news-activity__activity-items
+                            a.news-activity__block.hover__img-scale(href="https://www.huawei.com/ru/events/ru/digix_2020")
+                                .img__wrap
+                                    img.news-activity__block-img.img(src="img/main-page/news-activity/activity1.png")
+                                .news-activity__block-info
+                                    .news-activity__block-time 2020.08.05 - 10.25
+                                    .news-activity__block-category мероприятия
+                                .news-activity__block-name(target="_blank")
+                                    | Конкурс 2020 DIGIX GLOBAL AI CHALLENGE
+                            a.news-activity__block.hover__img-scale(href="https://www.huawei.com/ru/news/ru/2020/huawei_joins_apkit")
+                                .img__wrap
+                                    img.news-activity__block-img.img(src="img/main-page/news-activity/activity2.jpg")
+                                .news-activity__block-info
+                                    .news-activity__block-time 29 июля
+                                    .news-activity__block-category Новости
+                                .news-activity__block-name(target="_blank")
+                                    | Компания
+                                    | Huawei присоединилась к крупнейшему некоммерческому ...
+                            a.news-activity__block.hover__img-scale(href="https://www.huawei.com/ru/events/ru/better_world_summit2020")
+                                .img__wrap
+                                    img.news-activity__block-img.img(src="img/main-page/news-activity/activity3.png")
+                                .news-activity__block-info
+                                    .news-activity__block-time 2020.07.27 - 30
+                                    .news-activity__block-category мероприятия
+                                .news-activity__block-name(target="_blank")
+                                    | Better
+                                    | World Summit 2020
+                            .news-activity__facebook-list
+                                .swiper
+                                    .swiper-container
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="javascript:void(0)")
+                                                        | Сегодня
+                                                        | легендарный день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                            .swiper-slide
+                                                .news-activity__facebook
+                                                    .news-activity__facebook-info
+                                                        .news-activity__facebook-time
+                                                            | 6:00 PM · 20 авг. 2020
+                                                            | г.
+                                                        .news-activity__facebook-logo
+                                                            svg(width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                                g(clip-path="url(#clip0)")
+                                                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M24 22.6755C24 23.407 23.4068 24.0001 22.6754 24.0001L16.5594 24.0001V14.706H19.6792L20.1462 11.084H16.5594V8.77135C16.5594 7.72266 16.8507 7.008 18.3546 7.008L20.2726 7.00716V3.76763C19.9407 3.72347 18.8022 3.62485 17.4777 3.62485C14.7123 3.62485 12.8191 5.31282 12.8191 8.41275V11.084H9.69141V14.706H12.8191V24.0001L1.32459 24.0001C0.592875 24.0001 0 23.407 0 22.6755V1.32459C0 0.592969 0.592875 0 1.32459 0H22.6754C23.4068 0 24 0.592969 24 1.32459V22.6755Z" fill="white")
+                                                                defs
+                                                                    clippath#clip0
+                                                                        rect(width="24" height="24" fill="white")
+                                                    a.news-activity__facebook-text(href="#")
+                                                        | Сегодня легендарный
+                                                        | день для
+                                                        | всех россиян, ведь именно 20 августа отмечает свой день рождения
+                                                        | главный герой любимого советского мультфильма – Чебурашка! А какой
+                                                        | ваш любимый мультик детства?
+                                    .swiper-pagination
+
+                            
+                            .news-activity__news
+                                .news-activity__news-lists
+                                    .swiper
+                                        .swiper-container
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    .news-activity__news-list
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.08.11
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_joins_apkit" target="_blank")
+                                                                | Компания Huawei присоединилась к крупнейшему
+                                                                | некоммерческому объединению ИТ-отрасли в России — Ассоциации
+                                                                | предприятий компьютерных и информационных технологий
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.07.29
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/honor_cup_2020" target="_blank")
+                                                                | Huawei объявляет о старте Евразийских соревнований в
+                                                                | сфере ИКТ Honor Cup 2020
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.07.24
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/jetinfosytems_huawei_reference_center" target="_blank")
+                                                                | Эталонная ИКТ-инфраструктура: Huawei и «Инфосистемы
+                                                                | Джет» открыли технологический референс-центр
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.07.23
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_kunpeng_tionix_cloud_russia" target="_blank")
+                                                                | Облачные решения российского разработчика Tionix
+                                                                | Holding будут поддерживать cервера на базе процессора KunPeng
+                                                                | компании Huawei
+                                                .swiper-slide
+                                                    .news-activity__news-list
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.07.17
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/infoforum_huawei_award_russia" target="_blank")
+                                                                | Оргкомитет Национального форума информационной
+                                                                | безопасности «Инфофорум» вручил компании Huawei в России престижную
+                                                                | отраслевую премию
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.06.29
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_drweb_taishan_servers" target="_blank")
+                                                                | Мощная защита для мощной платформы: Dr.Web защищает
+                                                                | серверы TaiShan производства Huawei на платформе ARM64
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.06.23
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_tomsk_university_agreement" target="_blank")
+                                                                | Huawei и Томский государственный университет
+                                                                | подписали соглашение о сотрудничестве в области образования
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.05.25
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_open_source_summit_kaicode" target="_blank")
+                                                                | Huawei проведет первый Open Source Summit KaiCode,
+                                                                | победители которого получат $15 000
+                                                .swiper-slide
+                                                    .news-activity__news-list
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.05.18
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_beeline_belaz_5g_mining_case" target="_blank")
+                                                                | Водители на удаленке: сеть пятого поколения (5G)
+                                                                | впервые в Рос-сии используется на беспилотных БЕЛАЗах
+                                                        .news-activity__news-block
+                                                            .news-activity__news-block-info
+                                                                .news-activity__news-block-time 2020.05.02
+                                                                .news-activity__news-block-category новости
+                                                            a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_aiden_wu_interview_technology_against_covid19" target="_blank")
+                                                                | Эйден У: пандемия дала новый импульс цифровизации
+                                                                | общества
+                                        .swiper-pagination
+                    
+                    //- .news-activity__news
+                    //-     .news-activity__news-lists
+                    //-         .swiper
+                    //-             .swiper-container
+                    //-                 .swiper-wrapper
+                    //-                     .swiper-slide
+                    //-                         .news-activity__news-list
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.08.11
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_joins_apkit" target="_blank")
+                    //-                                     | Компания Huawei присоединилась к крупнейшему
+                    //-                                     | некоммерческому объединению ИТ-отрасли в России — Ассоциации
+                    //-                                     | предприятий компьютерных и информационных технологий
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.07.29
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/honor_cup_2020" target="_blank")
+                    //-                                     | Huawei объявляет о старте Евразийских соревнований в
+                    //-                                     | сфере ИКТ Honor Cup 2020
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.07.24
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/jetinfosytems_huawei_reference_center" target="_blank")
+                    //-                                     | Эталонная ИКТ-инфраструктура: Huawei и «Инфосистемы
+                    //-                                     | Джет» открыли технологический референс-центр
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.07.23
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_kunpeng_tionix_cloud_russia" target="_blank")
+                    //-                                     | Облачные решения российского разработчика Tionix
+                    //-                                     | Holding будут поддерживать cервера на базе процессора KunPeng
+                    //-                                     | компании Huawei
+                    //-                     .swiper-slide
+                    //-                         .news-activity__news-list
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.07.17
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/infoforum_huawei_award_russia" target="_blank")
+                    //-                                     | Оргкомитет Национального форума информационной
+                    //-                                     | безопасности «Инфофорум» вручил компании Huawei в России престижную
+                    //-                                     | отраслевую премию
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.06.29
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_drweb_taishan_servers" target="_blank")
+                    //-                                     | Мощная защита для мощной платформы: Dr.Web защищает
+                    //-                                     | серверы TaiShan производства Huawei на платформе ARM64
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.06.23
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_tomsk_university_agreement" target="_blank")
+                    //-                                     | Huawei и Томский государственный университет
+                    //-                                     | подписали соглашение о сотрудничестве в области образования
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.05.25
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_open_source_summit_kaicode" target="_blank")
+                    //-                                     | Huawei проведет первый Open Source Summit KaiCode,
+                    //-                                     | победители которого получат $15 000
+                    //-                     .swiper-slide
+                    //-                         .news-activity__news-list
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.05.18
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_beeline_belaz_5g_mining_case" target="_blank")
+                    //-                                     | Водители на удаленке: сеть пятого поколения (5G)
+                    //-                                     | впервые в Рос-сии используется на беспилотных БЕЛАЗах
+                    //-                             .news-activity__news-block
+                    //-                                 .news-activity__news-block-info
+                    //-                                     .news-activity__news-block-time 2020.05.02
+                    //-                                     .news-activity__news-block-category новости
+                    //-                                 a.news-activity__news-block-text(href="https://www.huawei.com/ru/news/ru/2020/huawei_aiden_wu_interview_technology_against_covid19" target="_blank")
+                    //-                                     | Эйден У: пандемия дала новый импульс цифровизации
+                    //-                                     | общества
+                    //-             .swiper-pagination
+              
+                .section-about__buttons
+                    a.button.section-about__button.section-about__button_small3.section-about__button_margin32.center(href="javascript:void(0)")
+                        | Все мероприятия
+                    a.button.section-about__button.section-about__button_middle3.center(href="javascript:void(0)")
+                        | все
+                        | новости
+
+
+        .global-news
+            .container
+                .section-title
+                    .section-title__title Факты о Huawei
+                    a.section-title__category(href="javascript:void(0)") все новости
+                .global-news__inner
+                    a.global-news__block.hover__img-scale(href="https://www.huawei.com/ru/news/ru/2020/huawei_launches_digital_payment_solution" target="_blank")
+                        .img__wrap
+                            img.global-news__block-img.img(src="img/main-page/global-news/news1.jpg")
+                        .global-news__block-info
+                            .global-news__block-time 15 августа
+                            .global-news__block-category Технологии
+                        .global-news__block-text
+                            | Компания Huawei представляет облачную платформу цифровых
+                            | платежей
+                    a.global-news__block.hover__img-scale(href="https://www.huawei.com/ru/news/ru/2020/cloudengine_s12700e_named_best_byfrostsullivan" target="_blank")
+                        .img__wrap
+                            img.global-news__block-img.img(src="img/main-page/global-news/news2.jpg")
+                        .global-news__block-info
+                            .global-news__block-time 16 июля
+                            .global-news__block-category Технологии
+                        .global-news__block-text
+                            | Новый коммутатор Huawei CloudEngine S12700E получил престижную награду от
+                            | компании ...
+                    a.global-news__block.hover__img-scale(href="https://www.huawei.com/ru/news/ru/2020/newinfra_coopwithcarriers_betterworld" target="_blank")
+                        .img__wrap
+                            img.global-news__block-img.img(src="img/main-page/global-news/news3.jpg")
+                        .global-news__block-info
+                            .global-news__block-time 05 августа
+                            .global-news__block-category Технологии
+                        .global-news__block-text
+                            | 5G + облако + ИИ: Huawei будет сотрудничать с операторами связи с целью создания
+                            | новой ...
+                    a.global-news__block.hover__img-scale(href="https://www.huawei.com/ru/facts/voices-of-huawei/5g-security" target="_blank")
+                        .img__wrap
+                            img.global-news__block-img.img(src="img/main-page/global-news/news4.jpg")
+                        .global-news__block-info
+                            .global-news__block-time 29 июля
+                            .global-news__block-category факты о huawei
+                        .global-news__block-text
+                            | 5G и
+                            | кибербезопасность. Huawei развеивает американские мифы
+
+
+
+

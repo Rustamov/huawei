@@ -1,0 +1,408 @@
+extends ../layouts/carrier
+include ../helpers/mixins
+
+block variables
+    - const title = "Главная"
+
+block content
+    main.main
+        +b.p-carrier-main
+
+            //- section.slider
+            //-     .carrier-banners
+            //-         .swiper
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide.standart-banner.slider-banner__title_light
+                                    .slider-banner.header-banners(style="background-image: url(img/main-page/slider-banner/header-slider3.jpg); ")
+                                        .slider-banner__inner
+                                            .slider-banner__title.slider-banner__title_light
+                                                | Строим сообщество единого цифрового будущего
+                                            .slider-banner__subtitle.slider-banner__subtitle_light
+                                                | КОНФЕРЕНЦИЯ HUAWEI «ЦИФРОВОЕ СООБЩЕСТВО 2020»
+                                            .slider-banner__button
+                                                a.button.button_large.button_transparent-white-border.center(target="_blank" href="https://huaweiconnect2020.huawei.ru/")
+                                                    | Узнать больше
+
+                                .swiper-slide.standart-banner.slider-banner__title_light
+                                    .slider-banner.header-banners(style="background-image: url(img/carrier/slider-banner/main-header-banner-2.jpg);")
+                                        .slider-banner__inner
+                                    
+                                .swiper-slide.standart-banner.slider-banner__title_light
+                                    .slider-banner.header-banners(style="background-image: url(img/carrier/slider-banner/main-header-banner-3.jpg);")
+                                        .slider-banner__inner
+                                            .slider-banner__title.slider-banner__title_light
+                                                | Строим сообщество единого цифрового будущего
+                                            .slider-banner__subtitle.slider-banner__subtitle_light
+                                                | КОНФЕРЕНЦИЯ HUAWEI «ЦИФРОВОЕ СООБЩЕСТВО 2020»
+                                            .slider-banner__button
+                                                a.button.button_large.button_transparent-white-border.center(target="_blank" href="https://huaweiconnect2020.huawei.ru/")
+                                                    | Узнать больше
+
+                        .swiper-pagination
+                        .swiper-button
+                            .swiper-button-next
+                                svg(width="15" height="26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M.406.417A1.435 1.435 0 012.41.399l12.166 11.746c.271.261.424.62.424.993 0 .374-.153.732-.424.994L2.696 25.6a1.435 1.435 0 01-2.003-.018 1.376 1.376 0 01.017-1.97l9.34-9.017c.386-.464.698-.485.698-1.458 0-1.034-.312-.993-.563-1.327L.424 2.386A1.376 1.376 0 01.406.416z" fill="#fff")
+                            .swiper-button-prev
+                                svg(width="15" height="26" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M14.594.417a1.435 1.435 0 00-2.005-.018L.425 12.145c-.271.261-.424.62-.424.993 0 .374.153.732.424.994L12.304 25.6a1.435 1.435 0 002.003-.018c.549-.548.541-1.43-.017-1.97l-9.34-9.017c-.386-.464-.698-.485-.698-1.458 0-1.034.312-.993.563-1.327l9.76-9.425c.56-.539.567-1.42.019-1.97z" fill="#fff")
+
+
+            +b.s-main-banners.--carrier
+                +e.slider-wrap
+                    +e.slider.js-main-banners-slider
+                        +e.slider-item
+                            +b.SECTION.s-common-banner-2.--dark-dawn.--light
+                                picture
+                                    +e.IMG.img(srcset="img/main-page/slider-banner/header-slider3.jpg" alt="Строим сообщество единого цифрового будущего")
+            
+                                +e.container.container
+                                    +e.box
+                                        +e.H2.title Строим сообщество единого цифрового будущего
+                                        +e.text.text КОНФЕРЕНЦИЯ HUAWEI «ЦИФРОВОЕ СООБЩЕСТВО 2020»
+                                        +e.buttons.row
+                                            +e.buttons-item.col-auto 
+                                                +e.A.link.btn.--geom-def.--theme-transparent(href="https://huaweiconnect2020.huawei.ru/") Узнать больше
+
+                    
+                        +e.slider-item
+                            +b.SECTION.s-common-banner-2.--dark-dawn
+                                picture
+                                    +e.IMG.img(srcset="img/carrier/slider-banner/main-header-banner-2.jpg" alt="Строим сообщество единого цифрового будущего")
+            
+                        
+                        +e.slider-item                                
+                            +b.SECTION.s-common-banner-2.--dark-dawn.--light
+                                picture
+                                    +e.IMG.img(srcset="img/carrier/slider-banner/main-header-banner-3.jpg" alt="Строим сообщество единого цифрового будущего")
+            
+                                +e.container.container
+                                    +e.box
+                                        +e.H2.title Строим сообщество единого цифрового будущего
+                                        +e.text.text  КОНФЕРЕНЦИЯ HUAWEI «ЦИФРОВОЕ СООБЩЕСТВО 2020»
+
+                                    +e.buttons.row
+                                        +e.buttons-item.col-auto
+                                            +e.A.link.btn.--geom-def.--theme-transparent(href="https://huaweiconnect2020.huawei.ru/" target="_blank") Узнать больше
+
+                +e.controls
+                    +e.controls-left
+                        +b.A.B.btn-arrow-2.--right.js-items-slider-prev(href="#")
+                            +icon('arrow-left-slider')
+
+                    +e.controls-right
+                        +b.A.B.btn-arrow-2.--right.js-items-slider-next(href="#")
+                            +icon('arrow-right-slider')
+    
+            section.cr-section-news
+                .cr-section-news__container
+
+                    +tabs.cr-news-tabs
+                        +tab()(data-tab-target="cr-news-tab-1").cr-news-tabs__tab
+                            span.cr-news-tabs__tab-icon
+                                span.cr-news-tabs__tab-icon-inner
+                                    img(src="img/carrier/news-tab-icon-1.png").cr-news-tabs__tab-icon-img.cr-news-tabs__tab-icon-img--first
+                                        
+                            span.cr-news-tabs__tab-text
+                                | 5G
+
+                        +tab()(data-tab-target="cr-news-tab-2").cr-news-tabs__tab.is-active
+                            span.cr-news-tabs__tab-icon
+                                span.cr-news-tabs__tab-icon-inner
+                                    img(src="img/carrier/news-tab-icon-2.png").cr-news-tabs__tab-icon-img.cr-news-tabs__tab-icon-img--second
+                                    
+                            span.cr-news-tabs__tab-text
+                                | Fn5G
+                                
+                        +tab()(data-tab-target="cr-news-tab-3").cr-news-tabs__tab
+                            span.cr-news-tabs__tab-icon
+                                span.cr-news-tabs__tab-icon-inner
+                                    img(src="img/carrier/news-tab-icon-3.png").cr-news-tabs__tab-icon-img.cr-news-tabs__tab-icon-img--third
+                                    
+                            span.cr-news-tabs__tab-text
+                                | Intelligent Service
+                        
+                    +tabs-content.cr-news-tabs__content
+                        +tab-wrapper()(data-tab="cr-news-tab-1" data-tab-group="cr-news-tabs").cr-news-tabs__content-wrapper
+                            +b.cr-publications
+                                +e.row-lv1.row
+                                    +e.col-lv1-1.col-auto
+                                        +b.cr-news-item.--large
+                                            +e.img-wrap
+                                                +e.IMG.img(src="img/carrier/news/news-item-5.jpg" alt="name" width="436" height="618")
+                                            +e.main
+                                                +e.tag Решения
+                                                +e.title.text Консалтинг по вопросам обслуживания и системная интеграция
+                                                +e.text.--fz-smaller.text Решение HUAWEI SmartCare® CEM направлено на обеспечение наилучшего качества работы сети и оптимального обслуживания клиентов, чтобы помочь операторам развивать цифровые услуги и достичь успеха в бизнесе. 
+
+                                            +e.bottom
+                                                // +e.A.link.btn.--geom-lg.--theme-red-white(href="#") Узнать больше
+
+
+                                    +e.col-lv1-2.col-auto
+                                        +e.row-lv2.row
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--dark.--shadow
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-2.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4") Смотреть
+                                                        //- +e.A.link-watch.js-video-popup(href="/media/5g-en.mp4") Смотреть
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-4.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        +e.tag.--mb-middle Routers
+                                                        +e.title Wi-Fi & 5G CPE
+
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4") Смотреть
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item.--dark
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-3.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        +e.tag Routers
+
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4") Смотреть
+
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--list.--shadow
+                                                    +b.A(href="#").cr-news-small-card
+                                                        +e.name Водители на удаленке: сеть пятого поколения (5G) впервые в России используется на беспилотных в России используется на беспилотных 
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                                                    +b.A(href="#").cr-news-small-card
+                                                        +e.name Водители на удаленке: сеть пятого поколения (5G) впервые в России используется на беспилотных
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                        +tab-wrapper()(data-tab="cr-news-tab-2" data-tab-group="cr-news-tabs").cr-news-tabs__content-wrapper.is-active
+                            +b.cr-publications
+                                +e.row-lv1.row
+                                    +e.col-lv1-1.col-auto
+                                        +b.cr-news-item.--large
+                                            +e.img-wrap
+                                                +e.IMG.img(src="img/carrier/news/news-item-1.jpg" alt="name" width="436" height="618")
+                                            +e.main
+                                                +e.tag Что такое Fn5G
+                                                +e.title.text Fn5G
+                                                +e.text.text Фиксированные сети пятого поколения
+
+                                            +e.bottom
+                                                +e.A.link.btn.--geom-lg.--theme-red-white(href="#") Узнать больше
+
+                                    +e.col-lv1-2.col-auto
+                                        +e.row-lv2.row
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--dark.--shadow
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-2.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="//carrier.huawei.com/~/media/CNBG/events/launch2020/video/5g-en.mp4") Смотреть
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-4.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        +e.tag.--mb-middle Routers
+                                                        +e.title Wi-Fi & 5G CPE
+
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="https://vimeo.com/140319731") Смотреть
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item.--dark
+                                                    +e.img-wrap
+                                                        +e.IMG.img(src="img/carrier/news/news-item-3.jpg" alt="name" width="436" height="618")
+                                                    +e.main
+                                                        +e.tag Routers
+
+                                                        
+                                                    +e.bottom
+                                                        +e.A.link-watch.js-video-popup(href="https://youtu.be/W7_kWuUfuqw") Смотреть
+
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--list.--shadow
+                                                    +b.A(href="#").cr-news-small-card
+                                                        +e.name Водители на удаленке: сеть пятого поколения (5G) впервые в России используется на беспилотных в России используется на беспилотных 
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                                                    +b.A(href="#").cr-news-small-card
+                                                        +e.name Водители на удаленке: сеть пятого поколения (5G) впервые в России используется на беспилотных
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+
+                        +tab-wrapper()(data-tab="cr-news-tab-3" data-tab-group="cr-news-tabs").cr-news-tabs__content-wrapper
+                            +b.cr-publications
+                                +e.row-lv1.row
+                                    +e.col-lv1-1.col-auto
+                                        +b.cr-news-item.--large
+                                            +e.img-wrap
+                                                +e.IMG.img(src="img/carrier/news/news-item-6.jpg" alt="name" width="436" height="618")
+                                            +e.main
+                                                +e.tag Что такое 5G
+                                                +e.title.text 
+                                                    | 5G, Cоздавая
+                                                    br
+                                                    | новую ценность
+                                                +e.text.--fz-smaller.text Развитие сети 5G по всему миру, её развертывание, экосистема и опыт находятся за гранью нашего воображения. Сеть 5G создает беспрецедентную ценность для всех, будь то отдельные люди, семьи или организации.
+
+                                            +e.bottom
+                                                // +e.A.link.btn.--geom-lg.--theme-red-white(href="#") Узнать больше
+
+
+                                    +e.col-lv1-2.col-auto
+                                        +e.row-lv2.row
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--text-news-item.--shadow
+                                                    +b.A(href="#").cr-news-card
+                                                        +e.name Водители на удаленке: сеть пятого поколения (5G) впервые в России используется на беспилотных ...
+                                                        +e.text.text Возможности сети пятого поколения в составе российского роботизированного комплекса грузоперевозок тестируются в нашей стране впервые.
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item.--text-news-item.--shadow
+                                                    +b.A(href="#").cr-news-card
+                                                        +e.name Huawei представляет 10 главных акселераторов глобального коммерческого внедрения технологии
+                                                        +e.text.text Ян Чаобинь, президент 5G-направления компании Huawei, представил 10 главных решений, разработанных Huawei, 
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                                            +e.col-lv2.col-6
+                                                +b.cr-news-item.--text-news-item.--shadow
+                                                    +b.A(href="#").cr-news-card
+                                                        +e.name 5G: высокие технологии против коронавируса
+                                                        +e.text.text Китаю удалось взять под контроль эпидемию коронавируса – на это ушло немногим более двух месяцев, жизнь в стране уже возвращается в нормальное русло.
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+                                            +e.col-lv2.--on-desktop.col-6
+                                                +b.cr-news-item.--text-news-item.--shadow
+                                                    +b.A(href="#").cr-news-card
+                                                        +e.name Ускоренное внедрение 5G в мире проложит дорогу к началу работы сетей 5G в России
+                                                        +e.text.text По состоянию на конец мая 2020 года в 42 странах мира в коммерческую эксплуатацию были запущены 82 сети 5G и сервисы, соответствующие определенным консорциумом 3GPP стандартам.
+                                                        +e.bottom
+                                                            +e.date 18 мая
+                                                            +e.more Publications
+
+
+            +b.SECTION.cr-global-news
+                .container
+                    +e.top
+                        +b.H2.sr-sec-title.--center Russian and Global News
+
+                    +e.slider-wrap
+                        +e.slider.js-cr-global-news-slider
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Эйден У: пандемия дала новый импульс цифровизации общества', 
+                                    'img/carrier/news/news-listing-0.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Компания Huawei представляет новые продукты и решения 5G, способные ', 
+                                    'img/carrier/news/news-listing-1.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Правительство Китая вложит 4,8 трлн долларов в развитие цифровой инфраструктуры', 
+                                    'img/carrier/news/news-listing-2.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Shandong Mobile, MIGU, футбольный клуб Шаньдун Лунэн Тайшань, China Sports', 
+                                    'img/carrier/news/news-listing-3.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Компания Huawei представляет новые продукты и решения 5G, способные ', 
+                                    'img/carrier/news/news-listing-1.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Правительство Китая вложит 4,8 трлн долларов в развитие цифровой инфраструктуры', 
+                                    'img/carrier/news/news-listing-2.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+                            +e.slider-item
+                                +newsListingItem(
+                                    'Shandong Mobile, MIGU, футбольный клуб Шаньдун Лунэн Тайшань, China Sports', 
+                                    'img/carrier/news/news-listing-3.jpg', 
+                                    '02.05.2020 ', 
+                                    '320',
+                                    '210',
+                                    '#Тип новости'
+                                )
+
+
+                    +e.bottom
+                        +e.controls
+                            +e.controls-left
+                                +b.A.B.btn-arrow.--right.js-items-slider-prev(href="#")
+                                    +icon('arrow-left')
+
+                            +e.controls-right
+                                +b.A.B.btn-arrow.--right.js-items-slider-next(href="#")
+                                    +icon('arrow-right')
+
+                    +e.more
+                        +e.A.more-link.btn.--geom-lg.--theme-grey-transparent.js-cr-global-news-more-btn(href="#") Показать ещё
+
+
+
+

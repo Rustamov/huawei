@@ -1,0 +1,74 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+    - const title = "Sitemap"
+
+block content
+    main.main
+        .container
+            ul.ui-sitemap
+                li
+                    a(href="main-page.html") Главная
+                li
+                    a(href="main-page-video-banner.html") Главная с он-лайн трансляцией в шапке
+                br
+                li
+                    a(href="404.html") 404
+                li
+                    a(href="news.html") Новости
+                li
+                    a(href="news-item.html") Страница новости 
+                li
+                    a(href="search.html") Поиск
+                li
+                    a(href="search-no-results.html") Поиск без результатов
+                li
+                    a(href="partners.html") Партнерство
+                li
+                    a(href="partners-policy.html") Партнеры по продажам
+                li
+                    a(href="about.html") О компании
+                li
+                    a(href="events.html") Мероприятия
+                li
+                    a(href="partners-become.html") Стать партнером
+                li
+                    a(href="partners-kunpeng.html") Партнерская программа по Kunpeng
+                li
+                    a(href="partners-ascend.html") Партнерская программа по Ascend
+                li
+                    a(href="text-page.html") Текстовая
+                li
+                    a(href="press-center.html") Пресс-центр
+                li
+                    a(href="ui.html") UI элементы
+
+                br
+                li
+                    a(href="HDCC_newsletter.html") Рассылка(HDCC_newsletter)
+
+                br
+                br
+
+                li
+                    a(href="carrier-main-page.html") Carrier главная
+                li
+                    a(href="carrier-fn5g.html") Carrier FN5G
+
+                br
+                br
+
+                li
+                    a(href="event-future.html") Будущее мероприятие
+                li
+                    a(href="event-past.html") Прошедшее мероприятие
+
+                br    
+                li
+                    a(href="hr.html") Карьера с Huawei
+    
+
+
+
+

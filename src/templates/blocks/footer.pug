@@ -1,0 +1,139 @@
+mixin footerSocials()
+    +b.footer-socials
+        +e.title Следите за новостями
+        +e.list
+            +e.A.link(href="https://www.facebook.com/huaweirus/" target="_blank")
+                +e.SPAN.icon.--fb
+                    +icon('fb')
+
+            +e.A.link(href="https://www.vk.com/huaweirussiaofficial" target="_blank")
+                +e.SPAN.icon.--vk
+                    +icon('vk')
+
+            +e.A.link(href="https://twitter.com/huaweirus" target="_blank")
+                +e.SPAN.icon.--tw
+                    +icon('tw')
+
+            +e.A.link(href="https://habr.com/en/company/huawei/blog/" target="_blank")
+                +e.SPAN.icon.--soc-h
+                    +icon('soc-h')
+
+            +e.A.link(href="https://www.youtube.com/channel/UChz4KRFfkJMfezuZKoEpa8A" target="_blank")
+                +e.SPAN.icon.--youtube
+                    +icon('youtube')
+                    
+            +e.A.link(href="http://www.linkedin.com/company/huawei" target="_blank")
+                +e.SPAN.icon.--linkedin
+                    +icon('linkedin')
+
+
+
+mixin footerSubdcribe()
+    +b.footer-subscribe
+        form(action="#" method="post" data-parsley-validate="data-parsley-validate")
+            +e.__form-box
+                +e.SPAN.__form-box-input.input-text-wrap
+                    +e.INPUT.__form-box-input-field.input-text.--geom-xl(type="email" placeholder="E-mail" required="")
+                +e.BUTTON.__form-box-button.btn.--geom-xl.--theme-red(type="submit") Подписаться на рассылку
+
+
++b.FOOTER.footer
+    .container
+        +e.top
+            +e.top-row
+                +e.top-col.--nav-1
+                    +b.footer-nav
+                        +e.H3.title 
+                            +e.SPAN.title-text O Huawei
+                            +e.SPAN.title-arrow
+                                +icon('arrow-down-2')
+                            
+
+                        +e.UL.list
+                            +e.LI.item
+                                +e.A.link(href="#") Корпоративная информация
+                            +e.LI.item
+                                +e.A.link(href="#") Мероприятия
+                            +e.LI.item
+                                +e.A.link(href="#") Новости
+                            +e.LI.item
+                                +e.A.link(href="#") Пресс-центр
+
+                +e.top-col.--nav-1
+                    +b.footer-nav
+                        +e.H3.title
+                            +e.SPAN.title-text Наши продукты
+                            +e.SPAN.title-arrow
+                                +icon('arrow-down-2')
+                        
+                        +e.UL.list
+                            +e.LI.item
+                                +e.A.link(href="#") Для потребителей
+                            +e.LI.item
+                                +e.A.link(href="#") Для предприятий
+                            +e.LI.item
+                                +e.A.link(href="#") Операторам связи
+
+                +e.top-col.--nav-1
+                    +b.footer-nav
+                        +e.H3.title
+                            +e.SPAN.title-text Техподдержка
+                            +e.SPAN.title-arrow
+                                +icon('arrow-down-2')
+                        
+                        +e.UL.list
+                            +e.LI.item
+                                +e.A.link(href="#") Потребителям
+                            +e.LI.item
+                                +e.A.link(href="#") Предприятиям
+                            +e.LI.item
+                                +e.A.link(href="#") Для операторов связи
+
+                +e.top-col.--nav-1
+                    +b.footer-nav
+                        +e.H3.title
+                            +e.SPAN.title-text Huawei в Евразии
+                            +e.SPAN.title-arrow
+                                +icon('arrow-down-2')
+                        
+                        +e.UL.list
+                            +e.LI.item
+                                +e.A.link(href="#") 
+                                    +e.I.item-icon
+                                        img(src="img/content/flag-1.svg", alt="Huawei Узбекистан")
+                                    +e.SPAN.item-text Huawei Узбекистан
+
+                            +e.LI.item
+                                +e.A.link(href="#") 
+                                    +e.I.item-icon
+                                        img(src="img/content/flag-2.svg", alt="Huawei Беларусь")
+                                    +e.SPAN.item-text Huawei Беларусь
+                                    
+                            +e.LI.item
+                                +e.A.link(href="#") 
+                                    +e.I.item-icon
+                                        img(src="img/content/flag-3.svg", alt="Huawei Казахстан")
+                                    +e.SPAN.item-text Huawei Казахстан
+
+
+        +e.middle
+            +e.middle-row
+                +e.middle-col.--socials
+                    +footerSocials
+
+                +e.middle-col.--subscribe
+                    +footerSubdcribe
+
+        +e.bottom
+            +e.bottom-row.row
+                +e.bottom-col.--copy.col-auto
+                    +e.SPAN.copy Copyright © 2020 Huawei Technologies Co., Ltd. All rights reserved. 
+                +e.bottom-col.--links.col-auto
+                    +e.UL.bottom-links
+                        // +e.LI.bottom-links-item
+                        //     +e.A.bottom-link(href="#") Связаться с нами
+                        +e.LI.bottom-links-item
+                            +e.A.bottom-link(href="#") Конфиденциальность
+                        +e.LI.bottom-links-item
+                            +e.A.bottom-link(href="#") Условия использования
+

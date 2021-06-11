@@ -1,0 +1,75 @@
+//- - var svgSpritePath = 'img/symbol/sprite.svg'
+include ../../../node_modules/bemto.pug/bemto
+
+mixin newsSocials()
+  +b.news-socials
+    +e.list
+      +e.A.link(href="#" target="_blank" 
+        data-sharer="facebook"
+        data-hashtag="#"
+        data-url="#"
+        )
+        +e.SPAN.icon.--fb
+          +icon('fb')
+
+      +e.A.link(href="#" target="_blank" 
+        data-sharer="vk"
+        data-caption="Caption"
+        data-title="title"
+        data-url="#"
+        )
+        +e.SPAN.icon.--vk
+          +icon('vk')
+
+      +e.A.link(href="#" target="_blank" 
+        data-sharer="twitter"
+        data-caption="Caption"
+        data-title="title"
+        data-hashtags=""
+        data-url="#"
+        )
+        +e.SPAN.icon.--tw
+           +icon('tw')
+
+      +e.A.link(href="https://connect.ok.ru/offer?url=https://URL.RU/&amp;title=TITLE&amp;utm_source=share2" target="_blank" )
+        +e.SPAN.icon.--ok
+            +icon('ok')
+
+      +e.A.link(href="#" target="_blank" 
+        data-sharer="telegram"
+        data-title="title"
+        data-url="#"
+        )
+        +e.SPAN.icon.--telegram
+             +icon('telegram')
+             
+      +e.A.link(href="#" target="_blank"  
+        data-sharer="whatsapp"
+        data-title="title"
+        data-url="#"
+        data-web
+        )
+        +e.SPAN.icon.--whatsapp
+            +icon('whatsapp')
+
+
+mixin footerSubdcribe()
+  +b.footer-subscribe
+    form(action="#" method="post" data-parsley-validate="data-parsley-validate")
+      +e.__form-box
+        +e.SPAN.__form-box-input.input-text-wrap
+          +e.INPUT.__form-box-input-field.input-text.--geom-xl(type="email" placeholder="E-mail" required="")
+        +e.BUTTON.__form-box-button.btn.--geom-xl.--theme-red(type="submit") Подписаться на рассылку
+
+
+
+-
+  set_bemto_settings({
+    prefix: {
+      'js-': true,
+      'is-': 'is-'
+    },
+    modifier: '--',
+  })
+
+include ../blocks/blocks

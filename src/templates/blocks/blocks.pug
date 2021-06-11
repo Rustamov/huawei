@@ -1,0 +1,884 @@
+mixin breadcrumbs(list, currentpage, mod)
+    - const lastindex = list.length + 1;
+
+    +b.UL.breadcrumbs(itemscope='' itemtype='http://schema.org/BreadcrumbList' class=mod)
+        +e.LI.item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            +e.A.link(href='/' itemprop='item')
+                span(itemprop='name' content='Главная') Главная
+            i.breadcrumbs__sep /
+            meta(itemprop='position' content='0')
+
+        each item, index in list.length ? list : ''
+            +e.LI.item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+                +e.A.link(href='/' itemprop='item')
+                    span(itemprop='name' content='Главная')= item
+                i.breadcrumbs__sep /
+                meta(itemprop='position' content=index + 1)
+
+        +e.LI.item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            span(itemprop='name' content='Главная')= currentpage
+            meta(itemprop='position' content=lastindex)
+        
+
+
+
+mixin newsSectionBanner()
+    +b.SECTION.s-news-banner
+        +e.IMG.img(src="img/content/news-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title Новости
+                +e.text.text
+                    p Узнавайте последние новости о компании из первых рук
+                //- +e.link-wrap
+                //-     +e.A.link.btn.--geom-lg.--theme-red(href="#") Читать полностью
+
+
+
+mixin newsListingItem(name, image, date, width, height, hashtag)
+    +b.A.news-item(href="#")&attributes(attributes)
+        +e.SPAN.img-wrap
+            +e.IMG.img(src=image alt=name width=width height=height)
+        +e.SPAN.main
+            +e.SPAN.title= name
+            +e.SPAN.main-bottom
+                +e.SPAN.date= date
+                if hashtag
+                    +e.SPAN.hashtag= hashtag
+
+mixin newsListingItemSmall(name, image, date, width, height)
+    +b.A.news-item-small(href="#")&attributes(attributes)
+        +e.SPAN.img-wrap
+            +e.IMG.img(src=image alt=name width=width height=height)
+        +e.SPAN.main
+            +e.SPAN.title= name
+            +e.SPAN.date= date
+
+
+
+mixin newsListingItem2(name, image, width, height)
+    +b.A.news-item-2(href="#")&attributes(attributes)
+        +e.SPAN.img-wrap
+            +e.IMG.img(src=image alt=name width=width height=height)
+        +e.SPAN.main
+            +e.SPAN.title= name
+
+
+
+mixin newsFilter()
+    +b.filter
+        form(action="#")
+            +e.toggle
+                +e.BUTTON.toggle-button.js-toggle-slide(data-target=".filter__body")
+                    +e.SPAN.toggle-button-text Сортировка по фильтрам
+                    +e.SPAN.toggle-button-arrow
+                        +icon('arrow-down-2')
+
+                +e.SPAN.toggle-clear
+                    +e.BUTTON.clear-link(href="#" type="resset") Сбросить
+
+            +e.body
+                +e.FIELDSET.fieldset
+                    +e.fieldset-top.--first
+                        +e.SPAN.fieldset-title Тип новости 
+                        +e.SPAN.fieldset-clear.--desktop
+                            +e.BUTTON.clear-link(href="#" type="resset") Сбросить
+
+                    +e.fieldset-main
+                        +e.checkboxs
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Интервью" value="Да" )
+                                    +e.SPAN.text 
+                                        | Интервью
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Публикации" value="Да")
+                                    +e.SPAN.text 
+                                        | Публикации
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Отчет" value="Да")
+                                    +e.SPAN.text 
+                                        | Отчет
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Пресс-релиз" value="Да" checked="")
+                                    +e.SPAN.text 
+                                        | Пресс-релиз
+
+                +e.FIELDSET.fieldset
+                    +e.fieldset-top
+                        +e.SPAN.fieldset-title Технологии
+
+                    +e.fieldset-main
+                        +e.checkboxs
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="5G" value="Да" )
+                                    +e.SPAN.text 
+                                        | 5G
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Искусственный интеллект" value="Да")
+                                    +e.SPAN.text 
+                                        | Искусственный интеллект
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Big Data" value="Да" checked="")
+                                    +e.SPAN.text 
+                                        | Big Data
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Облачные вычисления" value="Да")
+                                    +e.SPAN.text 
+                                        | Облачные вычисления
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Интернет вещей (loT)" value="Да")
+                                    +e.SPAN.text 
+                                        | Интернет вещей (loT)
+
+
+                +e.FIELDSET.fieldset
+                    +e.fieldset-top
+                        +e.SPAN.fieldset-title Индустрии 
+
+                    +e.fieldset-main
+                        +e.checkboxs
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Телеком" value="Да" )
+                                    +e.SPAN.text 
+                                        | Телеком
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Образование" value="Да")
+                                    +e.SPAN.text 
+                                        | Образование
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="IT" value="Да")
+                                    +e.SPAN.text 
+                                        | IT
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Энергетика" value="Да")
+                                    +e.SPAN.text 
+                                        | Энергетика
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Медицина" value="Да" checked="")
+                                    +e.SPAN.text 
+                                        | Медицина
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Горнодобывающая отрасль" value="Да")
+                                    +e.SPAN.text 
+                                        | Горнодобывающая отрасль
+
+                +e.FIELDSET.fieldset
+                    +e.fieldset-top
+                        +e.SPAN.fieldset-title Деятельность в России 
+
+                    +e.fieldset-main
+                        +e.checkboxs
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Цифровое сообщество" value="Да" )
+                                    +e.SPAN.text 
+                                        | Цифровое сообщество
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="5G New World" value="Да")
+                                    +e.SPAN.text 
+                                        | 5G New World
+
+                            +e.checkboxs-item
+                                +b.LABEL.filter-checkbox
+                                    +e.INPUT.input(type="checkbox" name="Партнеры" value="Да")
+                                    +e.SPAN.text 
+                                        | Партнеры
+
+
+
+mixin newsPagination()
+    +b.pagination&attributes(attributes)
+        +e.list-wrap
+            +e.UL.list
+                +e.LI.item.--prev
+                    +e.A.nav-btn.--prev.disabled(href="#")
+                        +icon('arrow-left')
+
+                +e.LI.item
+                    +e.A.link.is-current(href="#") 1
+                +e.LI.item
+                    +e.A.link(href="#") 2
+                +e.LI.item
+                    +e.A.link(href="#") 3
+                +e.LI.item
+                    +e.A.link(href="#") 4
+                +e.LI.item
+                    +e.A.link(href="#") ...
+                +e.LI.item
+                    +e.A.link(href="#") 268
+                    
+                +e.LI.item.--next
+                    +e.A.nav-btn.--next(href="#")
+                        +icon('arrow-right')
+
+
+        +e.go
+            form(action="#")
+                +e.go-inner
+                    +e.SPAN.go-label Перейти на страницу
+
+                    +e.SPAN.go-input
+                        +e.INPUT.go-input-field(type="number" value="1")
+
+                    +e.BUTTON.go-submit.link-more(type="submit") 
+                        | Идти
+                        +icon('arrow-right-more')
+
+
+
+              
+       
+
+
+mixin partnersSectionBanner()
+    +b.SECTION.s-partners-banner
+        +e.IMG.img(src="img/partners/partners-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title Открытость, Сотрудничество, Взаимовыгода
+                +e.text.text
+                    p Создаем ценности для клиентов вместе
+                +e.links-wrap
+                    +e.A.link.btn.--geom-lg.--theme-transparent(href="#") Стать Партнером
+
+
+
+mixin partnersPolicySectionBanner()
+    +b.SECTION.s-partners-policy-banner
+        +e.IMG.img(src="img/partners/partners-policy-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title.text-white Партнеры по продажам
+                +e.text.text-white
+                    p Разделите наш успех!
+                +e.buttons.row
+                    +e.buttons-item.col-auto 
+                        +e.A.link.btn.--geom-lg.--theme-red(href="#") Стать Партнером
+                    +e.buttons-item.col-auto
+                        +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                            +icon('download')
+                            span Условия и преимущества
+
+mixin partnersKunpengSectionBanner()
+    +b.SECTION.s-partners-policy-banner
+        +e.IMG.img(src="img/partners/partners-kunpeng-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title.text-white Партнерская программа по Kunpeng
+                +e.text.small-text.text-white
+                    p Партнерская программа направлена на создание новой экосистемы Kunpeng, в рамках которой наши партнеры смогут ближе познакомиться с сервером TaiShan и облачными сервисами Kunpeng Cloud и получить маркетинговую, техническую и другие виды поддержки
+                +e.buttons.row
+                    +e.buttons-item.col-auto
+                        +e.A.link.btn.--geom-lg.--theme-red(href="#") Стать Партнером
+                    +e.buttons-item.col-auto
+                         +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                            +icon('download')
+                            span Условия и преимущества
+
+mixin partnersAscendSectionBanner()
+    +b.SECTION.s-partners-policy-banner
+        +e.IMG.img(src="img/partners/partners-kunpeng-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title.text-white Партнерская программа по Ascend
+                +e.text.small-text.text-white
+                    p В рамках партнерской программы Ascend мы помогаем нашим партнерам адаптироваться к вычислительной платформе Atlas, предоставляем тренинговую, техническую и маркетинговую поддержку, таким образом, формируя новую экосистему Ascend
+                +e.buttons.row
+                    +e.buttons-item.col-auto
+                        +e.A.link.btn.--geom-lg.--theme-red(href="#") Стать Партнером
+                    +e.buttons-item.col-auto
+                        +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                            +icon('download')
+                            span Условия и преимущества
+
+
+mixin partnersListingItem(name, text, image,  width, height, url1= "#", url2 = "#")
+    +b.partners-item&attributes(attributes)
+        +e.A.img-wrap(href="#")
+            +e.IMG.img(src=image alt=name width=width height=height)
+        +e.A.main(href="#")
+            +e.SPAN.title= name
+            +e.SPAN.text= text
+        +e.buttons
+            +e.buttons-row.row
+                +e.buttons-col.col-6
+                    +e.A.link.btn.--geom-def.--theme-red(href=url1) Стать партнером
+                +e.buttons-col.col-6
+                    +e.A.link.btn.--geom-def.--theme-red-transparent(href=url2) Узнать больше
+
+
+mixin partnersProgramListingItem(name, text, image,  width, height, url1= "#", url2 = "#")
+    +b.partners-progam-item&attributes(attributes)
+        +e.main
+            +e.img-wrap
+                +e.IMG.img(src=image alt=name width=width height=height)
+            +e.SPAN.title= name
+            +e.SPAN.text= text
+        +e.buttons
+            +e.buttons-item
+                +e.A.button.btn.--geom-def.--theme-red(href=url1) Стать партнером
+            +e.buttons-item
+                +e.A.link.link-more(href=url2) 
+                    | Узнать больше
+                    +icon('arrow-right-more')
+                
+
+
+
+mixin partnersCooperationListingItem(name, text, image,  width, height, url1= "#")
+    +b.cooperation-item&attributes(attributes)
+        +e.img-wrap
+            +e.IMG.img(src=image alt=name width=width height=height)
+        +e.main
+            +e.SPAN.title= name
+            +e.SPAN.text= text
+        +e.buttons
+            +e.A.button.btn.--geom-def.--theme-red-transparent(href=url1) Подробнее
+
+                
+
+ 
+mixin partnersSectionCooperation()
+    +b.SECTION.s-cooperation
+        +e.banner
+            picture
+                source(srcset="img/partners/cooperation-banner-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                source(srcset="img/partners/cooperation-banner-sm.jpg" media="(max-width: 576px)")
+                +e.IMG.banner-img(src="img/partners/cooperation-banner.jpg")                            
+            
+            +e.banner-container.container
+                +e.banner-box
+                    +e.H2.banner-title Станьте частью экосистемы HUAWEI Developer
+                    +e.banner-text.text
+                        p Вместе с партнерами работаем над разработкой приложений, предоставляя сервисы разработки, тестирования, продвижения и монетизации приложений. Опираясь на обширную базу мобильных устройств, глобальные платформы и отраслевые ресурсы, мы стремимся создать открытую взаимовыгодную экосистему для инноваций и разработок.
+                    +e.banner-link-wrap
+                        +e.A.banner-link.link-more(href="#") 
+                            | Узнать подробнее
+                            +icon('arrow-right-more')
+                        
+
+        +e.items
+            .container
+                +e.items-row.row
+                    +e.items-col.col-12.col-md-4
+                        +partnersCooperationListingItem(
+                            'HUAWEI AppGallery', 
+                            'Вместе разрабатываем и продвигаем мобильные приложения', 
+                            'img/partners/partners-cooperation-0.png', 
+                            '432',
+                            '294',
+                            'https://developer.huawei.com/consumer/ru/appgallery'
+                        )
+
+                    +e.items-col.col-12.col-md-4
+                        +partnersCooperationListingItem(
+                            'HUAWEI Темы', 
+                            'Вместе разрабатываем новые темы для смартфонов Huawei', 
+                            'img/partners/partners-cooperation-1.png', 
+                            '434',
+                            '303',
+                            'https://developer.huawei.com/consumer/ru/huaweithemes'
+                        )
+
+                    +e.items-col.col-12.col-md-4
+                        +partnersCooperationListingItem(
+                            'HUAWEI HMS Core', 
+                            'Вместе внедряем передовые технологии и делаем контент и сервисы качественнее и доступнее', 
+                            'img/partners/partners-cooperation-2.png', 
+                            '340',
+                            '270',
+                            'https://developer.huawei.com/consumer/ru/hms'
+                        )
+
+mixin partnersSectionNews()
+    +b.SECTION.s-news
+        .container
+            +e.top
+                +e.top-row.row
+                    +e.top-col-title.col-auto
+                        +e.H2.title Новости наших партнеров
+                    +e.top-col-link.col-auto
+                        +e.A.all-link(href="#") Все новости
+
+            +e.slider-wrap
+                +e.slider.js-section-news-slider
+                    +e.slider-item
+                        +newsListingItemSmall(
+                            'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                            'img/temp/news-listing-small-0.png', 
+                            '18.08.2020', 
+                            '240',
+                            '170'
+                        )
+                    +e.slider-item
+                        +newsListingItemSmall(
+                            'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                            'img/temp/news-listing-small-1.png', 
+                            '18.08.2020', 
+                            '240',
+                            '170'
+                        )
+                    +e.slider-item
+                        +newsListingItemSmall(
+                            'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                            'img/temp/news-listing-small-2.png', 
+                            '18.08.2020', 
+                            '240',
+                            '170'
+                        )
+                    +e.slider-item
+                        +newsListingItemSmall(
+                            'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                            'img/temp/news-listing-small-3.png', 
+                            '18.08.2020', 
+                            '240',
+                            '170'
+                        )
+                    +e.slider-item
+                        +newsListingItemSmall(
+                            'Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно Компания Huawei одерживает победу на конкурсе Frost & Sullivan Awards, неизменно ', 
+                            'img/temp/news-listing-small-4.png', 
+                            '18.08.2020', 
+                            '240',
+                            '170'
+                        )                        
+
+            +e.bottom
+                +e.controls
+                    +e.controls-left
+                        +b.A.B.btn-arrow.--right.js-items-slider-prev(href="#")
+                            +icon('arrow-left')
+
+                    +e.controls-right
+                        +b.A.B.btn-arrow.--right.js-items-slider-next(href="#")
+                            +icon('arrow-right')
+
+mixin partnersSectionRefgisterSteps()
+    +b.SECTION.s-partners-steps
+        +e.H2.title Этапы регистрации
+
+        +e.items
+            +e.items-row
+                +e.items-col.card-col
+                    +e.items-card
+                        .card-item
+                            .card-num 1
+                            .card-title   Регистрация
+                            | личной учетной записи на партнерском портале e+Partner:
+                            br
+                            a.link.link--theme-red(href="https://partner.huawei.com/" target="_blank")
+                                b https://partner.huawei.com/
+                +e.items-col.card-col
+                    +e.items-card
+                        .card-item
+                            .card-num 2
+                            .card-title   Подача
+                            | заявки на регистрацию
+                            br
+                            | компании
+
+                +e.items-col.card-col
+                    +e.items-card
+                        .card-item
+                            .card-num 3
+                            .card-title   Подтверждение
+                            | регистрации со стороны
+                            br
+                            | Huawei
+                +e.items-col.btn-col
+                    +e.A.link.btn.--geom-lg.--theme-red-transparent(href="#") Стать Партнером
+
+
+
+
+
+
+mixin aboutSectionBanner()
+    +b.SECTION.s-about-banner
+        +e.IMG.img(src="img/about/about-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H2.title О Huawei 
+                +e.text.text
+                    p Создаем ценность для наших клиентов. Способствуем развитию отрасли. Стимулируем экономический рост.
+ 
+
+mixin aboutSectionResponsibility()
+    +b.SECTION.s-responsibility
+        +e.banner
+            +e.IMG.banner-img(src="img/about/about-responsibility-banner.jpg")
+            +e.banner-container.container
+                +e.banner-box
+                    +e.H2.banner-title Ответственная гражданская позиция
+                    +e.banner-text.text
+                        p Придерживаясь принципов корпоративной гражданской ответственности, Huawei прилагает значительные усилия к преодолению цифрового неравенства. Мы остро осознаем важность той роли, которую телекоммуникации играют в чрезвычайных ситуациях, требующих оперативного реагирования: например, в районах Западной Африки, охваченных эпидемией лихорадки Эбола, во время радиоактивного загрязнения в Японии после цунами и после мощного землетрясения в Сычуане (Китай), когда наши специалисты приложили все усилия к восстановлению сетей связи в пострадавших регионах и обеспечению бесперебойной работы критически важного телекоммуникационного оборудования. 
+                        p В рамках содействия устойчивому развитию мы также помогаем добиться успеха новому поколению ИКТ-специалистов с помощью программы Seeds for the Future. Студенты высших учебных заведений получают возможность посетить Китай, пройти обучение и приобрести непосредственный опыт работы в отрасли.
+                    
+                    +e.toggle-text.toggle-text-button-wrap
+                        +b.BUTTON.toggle-text-button.js-toggle-text(data-target=".s-responsibility__banner-text" data-max-height="310" data-label-open="Развернуть" data-label-close="Свернуть")
+                            +e.SPAN.text.js-toggle-text-label Развернуть
+                            +e.SPAN.arrow
+                                +icon('arrow-down-2')
+
+        +e.items
+            .container
+                +e.items-row.row
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Компания Huawei опубликовала отчет об устойчивом развитии за 2019 Компания Huawei опубликовала отчет об устойчивом развитии за 2019', 
+                            'img/temp/news-listing-6.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Оргкомитет Национального форума информационной безопасности «Инфофорум» об устойчивом развитии за 2019', 
+                            'img/content/news-listing-empty.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Huawei и Томский государственный университет подписали соглашение ', 
+                            'img/temp/news-listing-2.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Huawei поддержит исследования аспирантов факультета ВМК МГУ', 
+                            'img/temp/news-listing-1.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Сообщество openEuler стремится создать лучшую ОС для разноплановых ', 
+                            'img/temp/news-listing-3.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Исходный код MindSpore станет открытым, обеспечив мировое сообщество разработчиков универсальной вычислительной ИИ-архитектурой', 
+                            'img/temp/news-listing-5.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Студенты Новосибирского Государственного Технического Университета', 
+                            'img/temp/news-listing-0.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+                    +e.items-col.col-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+                        +newsListingItem(
+                            'Huawei поддержит исследования аспирантов МФТИ в области ', 
+                            'img/temp/news-listing-4.jpg', 
+                            '18.08.2020', 
+                            '320',
+                            '350',
+                            ''
+                        )
+
+        +e.more
+            +e.A.more-link.btn.--geom-lg.--theme-grey-transparent(href="#") Показать ещё новости
+
+
+
+                  
+mixin eventsSectionBanner()
+    +b.SECTION.s-events-banner
+        +e.IMG.img(src="img/events/events-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H1.title 
+                    | Строим сообщество 
+                    br
+                    | для единого цифрового будущего 
+                +e.text.text
+                    +e.P.text-line-1 
+                        b Huawei Digital Community Conference
+                    +e.P.text-line-2 
+                        b 30 сентября — 2 октября
+
+
+mixin eventsFilter()
+    +b.filter-hor
+        form(action="#")
+            +e.toggle
+                +e.BUTTON.toggle-button
+                    +e.SPAN.toggle-button-text Фильтрация
+
+                +e.SPAN.toggle-clear
+                    +e.BUTTON.clear-link(href="#" type="resset") Сбросить
+
+            +e.row
+                +e.col.--type
+                    +e.FIELDSET.fieldset
+                        +e.fieldset-top
+                            +e.SPAN.fieldset-title Тип
+
+                        +e.fieldset-main
+                            +e.checkboxs
+                                +e.checkboxs-item
+                                    +b.LABEL.filter-checkbox
+                                        +e.INPUT.input(type="checkbox" name="Глобальные" value="Да" )
+                                        +e.SPAN.text 
+                                            | Глобальные
+
+                                +e.checkboxs-item
+                                    +b.LABEL.filter-checkbox
+                                        +e.INPUT.input(type="checkbox" name="Локальные" value="Да")
+                                        +e.SPAN.text 
+                                            | Локальные
+
+
+                +e.col.--Technologies
+                    +e.FIELDSET.fieldset
+                        +e.fieldset-top
+                            +e.SPAN.fieldset-title Технологии
+
+                        +e.fieldset-main
+                            +e.checkboxs
+                                +e.checkboxs-item
+                                    +b.LABEL.filter-checkbox
+                                        +e.INPUT.input(type="checkbox" name="Трансляция" value="Да" )
+                                        +e.SPAN.text 
+                                            | Трансляция
+
+                                +e.checkboxs-item
+                                    +b.LABEL.filter-checkbox
+                                        +e.INPUT.input(type="checkbox" name="Офлайн" value="Да")
+                                        +e.SPAN.text 
+                                            | Офлайн
+
+                                +e.checkboxs-item
+                                    +b.LABEL.filter-checkbox
+                                        +e.INPUT.input(type="checkbox" name="Вебинар" value="Да")
+                                        +e.SPAN.text 
+                                            | Вебинар
+                
+                +e.col.--clear
+                    +e.clear
+                        +e.BUTTON.clear-link(href="#" type="resset") Сбросить
+
+mixin eventsPagination()
+    +b.pagination&attributes(attributes)
+        +e.list-wrap
+            +e.UL.list
+                +e.LI.item.--prev
+                    +e.A.nav-btn.--prev.disabled(href="#")
+                        +icon('arrow-left')
+
+                +e.LI.item
+                    +e.A.link.is-current(href="#") 1
+                +e.LI.item
+                    +e.A.link(href="#") 2
+                +e.LI.item
+                    +e.A.link(href="#") 3
+                +e.LI.item
+                    +e.A.link(href="#") 4
+                +e.LI.item
+                    +e.A.link(href="#") 5
+                +e.LI.item
+                    +e.A.link(href="#") 6
+                +e.LI.item
+                    +e.A.link(href="#") ...
+                +e.LI.item
+                    +e.A.link(href="#") 268
+                    
+                +e.LI.item.--next
+                    +e.A.nav-btn.--next(href="#")
+                        +icon('arrow-right')
+
+
+mixin eventsListingItem(name, date, address, image, width, height, tag)
+    +b.events-item&attributes(attributes)
+        +e.A.img-wrap(href="#")
+            +e.IMG.img(src=image alt=name width=width height=height)
+
+        +e.main
+            +e.A.title(href="#")= name
+
+            +e.SPAN.date
+                +e.SPAN.date-icon
+                    +icon('schedule')
+                +e.SPAN.date-text 31/08/2020&nbsp;&nbsp;19:00 (GMT +3)
+
+            +e.SPAN.address
+                +e.SPAN.address-icon
+                    +icon('address')
+                +e.SPAN.address-text= address 
+
+            +e.buttons
+                +e.buttons-item 
+                    +e.A.button.btn.--geom-def.--theme-red-transparent(href="#") Зарегистрироваться
+                +e.buttons-item
+                    +e.A.link.link-more(href="#") 
+                        | Узнать больше
+                        +icon('arrow-right-more')
+
+        if tag
+            +e.SPAN.tag= tag
+                
+
+
+
+
+
+mixin pressSectionBanner()
+    +b.SECTION.s-press-banner
+        +e.IMG.img(src="img/press/press-banner.jpg")
+        +e.container.container
+            +e.box
+                +e.H2.title Пресс-центр
+                +e.text.text
+                    p Взаимовыгодное сотрудничество в сфере продвижения товаров, решений и услуг компании Huawei конечным клиентам
+ 
+
+    
+
+mixin popupHrResume()
+    .popup.popup--hr-resume(id="popup-hr-resume")
+        +b.hr-resume-popup
+            form(action="#" method="post" data-parsley-validate="data-parsley-validate")
+                +e.title
+                    +b.H2.hr-sec-title.--center Отправить резюме
+                +e.text
+                    p Отправьте нам резюме и свои контактные данные                        
+
+                +e.fields
+                    +e.fields-row.row
+                        +e.fields-col.col-12.col-sm-6
+                            label.input-text-wrap
+                                span.input-text-label Ваше имя
+                                input.input-text.--geom-def(type="text" placeholder="" required)
+
+                        +e.fields-col.col-12.col-sm-6
+                            label.input-text-wrap
+                                span.input-text-label Фамилия
+                                input.input-text.--geom-def(type="text" placeholder="" required)
+
+                        +e.fields-col.col-12.col-sm-6
+                            label.input-text-wrap
+                                span.input-text-label Электронная почта
+                                input.input-text.--geom-def(type="email" placeholder="primer@mail.ru" required="")
+
+                        +e.fields-col.col-12.col-sm-6
+                            label.input-text-wrap
+                                span.input-text-label Контактный телефон
+                                input.input-text.--geom-def(type="tel" placeholder="+7 (987) 654 32 10" required="" data-parsley-ru-phone)
+
+                +e.file
+                    +b.LABEL.file-input
+                        +e.SPAN.icon
+                            +icon('file-attach')
+                        +e.SPAN.label Прикрепить файл (до 2 Мб)
+                
+                        +e.INPUT.input.js-file-simple(type="file" placeholder="Прикрепить файл (до 2 Мб)")
+
+                +e.note Все поля обязательны для заполнения
+
+                +e.agree
+                    +b.LABEL.checkbox-s
+                        +e.INPUT.input(type="checkbox" name="Интервью" value="Да" required data-parsley-error-message="Нужно согласие на обработку данных" data-parsley-multiple="Согласие на обработку данных")
+                        +e.SPAN.icon
+                            +icon('checkbox')                        
+                        +e.SPAN.text 
+                            | Я соглашаюсь с условиями и порядком обработки моих персональных данных, установленных 
+                            a(href="https://www.huawei.com/ru/privacy-policy" target="_blank") «Политикой ООО «Техкомпания Хуавэй»» в отношении обработки персональных данных и сведениями о реализуемых требованиях к защите персональных данных» и условиями «Пользовательского соглашения».
+
+                +e.submit-wrap
+                    +e.BUTTON.submit.btn.--geom-def.--theme-red(type="submit") Отправить
+
+
+
+mixin sectionFeedback()
+    +b.SECTION.s-feedback
+        +e.box
+            form(action="#" method="post" data-parsley-validate="data-parsley-validate")
+
+
+                +e.H2.title Связаться с нами
+                +e.text.text
+                    p Напишите и мы вам обязательно ответим
+
+                +e.fields
+                    +e.fields-row.row
+                        +e.fields-col.col-12.col-sm-6
+                            +e.fields-row.row
+                                +e.fields-col.col-12
+                                    span.input-text-wrap
+                                        input.input-text.--geom-def(type="text" placeholder="Ваше имя")
+                                +e.fields-col.col-12
+                                    span.input-text-wrap
+                                        input.input-text.--geom-def(type="email" placeholder="Электронная почта" required="")
+                        +e.fields-col.col-12.col-sm-6
+                            span.input-text-wrap
+                                textarea.input-text.--geom-def.--geom-h-100(placeholder="Сообщение" rows="4")
+
+                        +e.fields-col.--agree.col-12
+                            +b.LABEL.checkbox-s
+                                +e.INPUT.input(type="checkbox" name="Интервью" value="Да" required data-parsley-error-message="Нужно согласие на обработку данных" data-parsley-multiple="Согласие на обработку данных")
+                                +e.SPAN.icon
+                                    +icon('checkbox')                        
+                                +e.SPAN.text 
+                                    | Я соглашаюсь с 
+                                    a(href="https://www.huawei.com/ru/privacy-policy" target="_blank") условиями и порядком обработки моих персональных данных
+                                    | , установленных «Политикой ООО «Техкомпания Хуавэй»» в отношении обработки персональных данных и сведениями о реализуемых требованиях к защите персональных данных» и условиями «Пользовательского соглашения».
+
+
+                        +e.fields-col.col-12
+                            +e.BUTTON.submit.btn.--geom-def.--theme-red(type="submit") Отправить

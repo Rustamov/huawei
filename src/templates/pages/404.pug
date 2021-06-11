@@ -1,0 +1,18 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "404"
+
+block content
+	+b.p-error
+		.container
+			+e.top
+				+e.IMG.img-404(src="../img/error/404.svg")
+				+e.IMG.img-head(src="../img/error/head.svg")
+			+e.text Sorry, the page you are looking for does not exist.
+			+e.text Извините, страница, которую вы ищете, не существует.
+			+e.A(href="/").back Вернуться на главную
+
+
+

@@ -1,0 +1,138 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Мероприятия"
+
+block content
+    main.main
+        +b.p-events
+            //- +eventsSectionBanner
+        
+            +b.SECTION.s-common-banner.--light
+                +e.IMG.img(src="img/events/events-banner.jpg")
+
+                +e.container.container
+                    +e.box
+                        +e.box
+                            +e.H1.title 
+                                | СТРОИМ СООБЩЕСТВО 
+                                +e.SPAN.br
+                                | ДЛЯ ЕДИНОГО ЦИФРОВОГО БУДУЩЕГО
+                            +e.text.text
+                                b HUAWEI DIGITAL COMMUNITY CONFERENCE
+                                br
+                                br
+                                b 30 сентября — 2 октября
+
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs([], title)
+
+                    +b.p-events-toggle
+                        +e.BUTTON.button.js-toggle-slide(data-target=".p-events__toggle-body ")
+                            +e.SPAN.button-text Все мероприятия
+                            +e.SPAN.button-arrow
+                                +icon('arrow-down-2')
+
+
+                    +e.toggle-body 
+                        +e.tabs 
+                            +b.UL.events-tabs.tabs
+                                +e.LI.tab.tabs__tab.is-active 
+                                    +e.A.link(href="#")
+                                        +e.SPAN.link-arrow
+                                            +icon('arrow-right')
+                                        +e.SPAN.link-text Все мероприятия
+
+                                +e.LI.tab.tabs__tab 
+                                    +e.A.link(href="#")
+                                        +e.SPAN.link-text Будущие
+
+                                +e.LI.tab.tabs__tab 
+                                    +e.A.link(href="#")
+                                        +e.SPAN.link-text Прошедшие
+
+
+                        +e.filter
+                            +eventsFilter
+
+                    +e.items
+                        +e.items-row.row
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Moscow (On-line)', 
+                                    'img/events/news-listing-0.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Moscow (On-line)', 
+                                    'img/events/news-listing-1.jpg', 
+                                    '436',
+                                    '210',
+                                    'Трансляция'
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'г. Москва, Покровка, 47/24', 
+                                    'img/events/news-listing-2.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Сочи, Красная поляна', 
+                                    'img/events/news-listing-3.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Cape Town, South Africa', 
+                                    'img/events/news-listing-4.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-md-6.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Moscow (On-line)', 
+                                    'img/events/news-listing-5.jpg', 
+                                    '436',
+                                    '210',
+                                    'Трансляция'
+                                )
+
+
+                    +e.pagination
+                        +eventsPagination
+
+
+    +sectionFeedback
+
+
+

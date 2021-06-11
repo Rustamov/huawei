@@ -1,0 +1,312 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Партнёрство"
+
+block content
+    main.main
+        +b.p-partners
+            //- +partnersAscendSectionBanner
+            +b.SECTION.s-common-banner.--light
+                +e.IMG.img(src="img/partners/partners-kunpeng-banner.jpg")
+                
+                +e.container.container
+                    +e.box
+                        +e.H1.title.text-white Партнерская программа по Ascend
+                        +e.text.small-text.text-white
+                            p В рамках партнерской программы Ascend мы помогаем нашим партнерам адаптироваться к вычислительной платформе Atlas, предоставляем тренинговую, техническую и маркетинговую поддержку, таким образом, формируя новую экосистему Ascend
+                        +e.buttons.row
+                            +e.buttons-item.col-auto
+                                +e.A.link.btn.--geom-lg.--theme-red(href="#") Стать Партнером
+                            +e.buttons-item.col-auto
+                                +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                                    +icon('download')
+                                    span Условия и преимущества
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs([], title)
+                    .s-partners-steps__title.H2 Стандарты сертификации для партнеров в рамках программы Ascend
+                        br
+                        |(для разработчиков прикладного ПО)
+
+                    .table-wrap
+                        table
+                            thead
+                                tr
+                                    th(colspan='2', rowspan='1', width='15%') Вид партнерства
+                                    th(width='15%' style="text-align:center") Авторизованный
+                                    th(width='15%' style="text-align:center")  Сертифицированный
+                                    th(width='15%' style="text-align:center") Приоритетный 
+                                    th(width='25%' style="text-align:center") Передовой
+                            tbody
+                                tr
+                                    th(colspan='2', rowspan='1', )
+                                        strong Требования к решениям 
+                                    td
+                                    td
+                                    td(style="text-align:center") 5 млн
+                                    td(style="text-align:center") 10 млн
+                                tr
+                                    th(colspan='1', rowspan='2', )
+                                        strong Совместные решения
+                                    th Техническая сертификация
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    th Отраслевые мощности
+                                    td
+                                    td
+                                    td(style="text-align:center") 1
+                                    td(style="text-align:center") 1
+                                tr
+                                    th
+                                        strong Маркетинговая активность
+                                    th Продвижение бренда
+                                    td
+                                    td
+                                    td(style="text-align:center") 1 раз
+                                    td(style="text-align:center") 2 раза
+                                tr
+                                    th(colspan='2', rowspan='1', )
+                                        strong Specialist certification solutions personnel
+                                    td
+                                    td
+                                    td(style="text-align:center") 1 чел
+                                    td(style="text-align:center") 3 чел
+                                tr
+                                    th(colspan='2', rowspan='1', )
+                                        strong Career certification personnel
+                                    td
+                                    td
+                                    td(style="text-align:center") 6 начинающих сертифицированных специалистов (HCIA)
+                                    td(style="text-align:center") 10 начинающих сертифицированных специалистов (HCIA), 5 сертифицированных специалистов продвинутого уровня (HCIP)
+                                tr
+                                    th(colspan='2', rowspan='1', )
+                                        strong Взаимное сертифицирование
+                                    td
+                                    td
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                        
+                    br
+                    br
+                    .s-partners-steps__title.H2 Права партнеров и бонусная программа
+                    
+                    .table-wrap
+                        table
+                            thead
+                                tr
+                                    th(width='12%') Вид поддержки
+                                    th(width='17%') Права
+                                    th(width='20%') Описание прав
+                                    th(width='1%' style="text-align:center") Авторизованный партнер
+                                    th(width='1%' style="text-align:center") Сертифицированный партнер
+                                    th(width='20%' style="text-align:center") Приоритетный
+                                        br
+                                        | партнер
+                                    th(width='20%' style="text-align:center") Передовой
+                                        br
+                                        | партнер
+                            tbody
+                                tr
+                                    th(colspan='1', rowspan='3', style=' text-align:center', width='10%')
+                                        strong Тренинг
+                                    td(colspan='1', rowspan='3') Профессиональное тестирование
+                                    td Количество эзаменационных билетов тестирования на сертификацию Huawei
+                                    td
+                                    td(style='text-align: center;') 5
+                                    td(style='text-align: center;') 10
+                                    td(style='text-align: center;') 25
+                                tr
+                                    td Бесплатное участие в онлайн-тренингах
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Возможность приглашения на специализированные тренинги
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    th(colspan='1', rowspan='7', style=' text-align:center', width='10%')
+                                        strong Техническая поддержка
+                                    td Открытые ресурсы для разработчиков 
+                                    td
+                                        | Доступ к инструментарию разработчика, технической документации, форуму и удаленным испытаниям
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Поддержка разработчиков 
+                                    td Почта, горячая линия, удаленная поддержка и поддержка на местах
+                                    td
+                                    td(style='text-align: center;') Удаленная поддержка
+                                    td(style='text-align: center;') Удаленная поддержка, поддержка на местах
+                                    td(style='text-align: center;') Удаленная поддержка, поддержка на местах
+                                tr
+                                    td Лаборатория Kunpeng
+                                    td Техническая сертификация
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td NRE
+                                    td Одноразовая программа поощрения за исследования
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Купоны на доступ к облачным ресурсам
+                                    td Предварительное количество
+                                    td(style='text-align: center;') 10 000
+                                    td(style='text-align: center;') 10 000
+                                    td(style='text-align: center;') 25 000
+                                    td(style='text-align: center;') 50 000
+                                tr
+                                    td Демопродукты
+                                    td Скидка на демопродукты
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Эталонный анализ плана продукции
+                                    td Эталонный анализ плана продукции
+                                    td
+                                    td
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    th(colspan='1', rowspan='5', style=' text-align:center', width='10%')
+                                        strong Маркетинговая поддержка
+                                        strong ​​​​​​
+                                    td Поддержка в маркетинговых операциях 
+                                    td Выпуск совместных решений
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Продвижение на Marketplace
+                                    td Подача заявления на доступ к Marketplace
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Участие в маркетинговых операциях компании Huawei
+                                    td Приглашение участвовать в маркетинговых операциях компании Huawei
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Права на брендовый логотип
+                                    td
+                                        | Использование официального лого партнера по разработке в маркетинговой документации
+                                    td
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td Участие в отраслевых выставках
+                                    td Совместное участие в отраслевых выставках
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    th(colspan='1', rowspan='3', style=' text-align:center', width='10%')
+                                        strong Деловая поддержка
+                                    td Программа специального поощрения в рамках партнерской экосистемы
+                                    td Поощрение на основе деловых результатов, NRE
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td(colspan='1', rowspan='2') Предпочтение при выборе проекта 
+                                    td
+                                        | Преимущества независимых поставщиков ПО, выпускающих совместные решения, при выборе проекта
+                                    td
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    td
+                                        | Внедрение совместных решений в систему продаж Huawei, преимущества при продвижении на рынок
+                                    td
+                                    td
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                    td(style="text-align:center")
+                                        img(src="../img/partners/check.svg")
+                                tr
+                                    th(colspan='1', rowspan='1', style=' text-align:center', width='10%')
+                                        strong Стратегические ресурсы
+                                    td Права для исполнительных директоров компаний-партнеров
+                                    td Участие в форумах на высшем уровне, организованных Huawei
+                                    td
+                                    td
+                                    td
+                                    td
+
+        +sectionFeedback
+            
+
+

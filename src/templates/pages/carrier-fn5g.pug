@@ -1,0 +1,451 @@
+extends ../layouts/carrier
+include ../helpers/mixins
+
+block variables
+    - const title = "Fn5g"
+
+block content
+    main.main
+        +b.p-carrier-fn5g
+            +b.SECTION.s-common-banner.--light.--h600
+                +e.IMG.img(src="img/carrier/fn5g/banner-img.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title Fifth-Generation Fixed Networks For Full-Connected Intelligent Society
+                        +e.text
+                            p 
+                                | FN5G=F
+                                span(style="color: #C7000B") A
+                                | 5G+F
+                                span(style="color: #C7000B") T
+                                | 5G+F
+                                span(style="color: #C7000B") I
+                                | 5G
+                        +e.buttons.row
+                            +e.buttons-item.col-auto
+                                +e.A.link.btn.--geom-lg.--theme-red(target="_blank" href="#")
+                                    | Узнать больше
+
+            +b.SECTION.s-fn5g-first
+                .container
+                    +e.breadcrumbs.breadcrumbs-block
+                        +breadcrumbs([], title)
+
+                    
+                    +e.title
+                        +b.H2.sr-sec-title.--center.--wide
+                            | FN5G + 5G знаменуют вступление общества в интеллектуальную эру
+
+                    +e.content
+                        +e.content-left
+                            +e.IMG.content-left-img(src="img/carrier/fn5g/content-left.png")
+
+                            +e.slider-wrap
+                                +e.slider.js-s-fn5g-first-slider
+                                    +e.slider-item
+                                        +e.slide-img-wrap
+                                            +e.IMG.slide-img(src="img/carrier/fn5g/content-slide-0.png")
+                                        
+                                    +e.slider-item
+                                        +e.slide-img-wrap
+                                            +e.IMG.slide-img(src="img/carrier/fn5g/content-slide-1.png")
+                                        
+                                    +e.slider-item
+                                        +e.slide-img-wrap
+                                            +e.IMG.slide-img(src="img/carrier/fn5g/content-slide-2.png")
+                                        
+                                    +e.slider-item
+                                        +e.slide-img-wrap
+                                            +e.IMG.slide-img(src="img/carrier/fn5g/content-slide-3.png")
+                                        
+                                    +e.slider-item
+                                        +e.slide-img-wrap
+                                            +e.IMG.slide-img.--fifth(src="img/carrier/fn5g/content-slide-4.png")
+
+                                +e.nav
+                                    +e.nav-item.is-current
+                                        +e.SPAN.nav-item-label 5G
+                                        +e.SPAN.nav-item-box.--first
+                                    +e.nav-item 
+                                        +e.SPAN.nav-item-label 4G
+                                        +e.SPAN.nav-item-box.--second
+                                    +e.nav-item 
+                                        +e.SPAN.nav-item-label 3G
+                                        +e.SPAN.nav-item-box.--third
+                                    +e.nav-item 
+                                        +e.SPAN.nav-item-label 2G
+                                        +e.SPAN.nav-item-box.--fourth
+                                    +e.nav-item 
+                                        +e.SPAN.nav-item-label 1G
+                                        +e.SPAN.nav-item-box.--fifth                                   
+
+
+                        +e.content-right
+                            +e.IMG.content-right-img(src="img/carrier/fn5g/content-right.png")
+                        
+                        
+
+                    +e.title-2
+                        +b.H3.sr-sec-title.--center.--no-bd 
+                            span(style="color: #C7000B") FN5G
+                            | : пятое поколение фиксированной сети
+
+
+            +b.SECTION.s-fn5g-5g
+                .container
+                   
+                    +e.title
+                        +b.H2.sr-sec-title.--center 5G Foundation
+
+                    +e.items
+                        +e.items-row
+                            +e.items-col
+                                +b.s-fn5g-5g-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-0.png" alt="Intelligent O&M" width="278" height="277")
+                                    +e.title Intelligent O&M
+                                    +e.text.text
+                                        ul
+                                            li  Automatic 5G site densification, improving deployment efficiency by 90%
+                                            li  Intelligent clock planning and deployment
+           
+                            +e.items-col
+                                +b.s-fn5g-5g-item.--wide
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-1.png" alt="Committed SLAs" width="270" height="270")
+                                    +e.title Committed SLAs
+                                    +e.text.text
+                                        ul
+                                            li FlexE slicing for guaranteed bandwidth
+                                            li SRv6-based intelligent traffic steering with committed SLAs
+                                            li TI-LFA (protection switching within 50ms) + iFIT (fault locating within minutes) for network high availability
+           
+                            +e.items-col
+                                +b.s-fn5g-5g-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-2.png" alt="Optimal Cost per Bit" width="262" height="270")
+                                    +e.title Optimal Cost per Bit
+                                    +e.text.text
+                                        ul
+                                            li 10GE to site, 50GE access rings
+                                            li Aggregation/Core 100GE/400GE
+           
+      
+            +b.SECTION.s-fn5g-connect
+                .container
+                   
+                    +e.title
+                        +b.H2.sr-sec-title.--center Premium Connection
+
+                    +e.items
+                        +e.items-row
+                            +e.items-col
+                                +b.s-fn5g-connect-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-4.png" alt="FN5G@Home" width="176" height="112")
+                                    +e.title FN5G@Home
+                                    +e.text.text
+                                        p
+                                            | Online Home Service Experience Reshaping, 
+                                            b AI ONT Helps Operator Enable “Home” Economy
+                            +e.items-col
+                                +b.s-fn5g-connect-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-5.png" alt="FN5G@All-Optical Campus" width="283" height="104")
+                                    +e.title FN5G@All-Optical Campus
+                                    +e.text.text
+                                       p
+                                            | Fiber-in and Copper-out, One-time Network Construction,
+                                            b One Fiber for Multiple Services
+
+                            +e.items-col
+                                +b.s-fn5g-connect-item.--wide
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/carrier/fn5g/icon-6.png" alt="FN5G@City" width="260" height="118")
+                                    +e.title FN5G@City
+                                    +e.text.text
+                                        p
+                                            | Industry Cloudification and Digitalization Drive Private Line Acceleration and Quality Improvement, 
+                                            b big bandwidth, low-latency and high availability
+           
+
+            +b.SECTION.s-common-banner.--light.--h520
+                +e.IMG.img(src="img/carrier/fn5g/banner-img-1.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H1.title White paper
+                        +e.text
+                            p Официальный технический документ по облачным сервисам виртуальной реальности 5G Стандарты качества сервисов
+                        +e.buttons.row
+                            +e.buttons-item.col-auto
+                                +e.A.link.btn.--geom-lg.--theme-red(href="file.pdf" download)
+                                    +icon('download')
+                                    span White Paper
+
+           
+            +b.SECTION.s-fn5g-news
+                .container
+                    +tabs.s-fn5g-news__tabs
+                        +tab()(data-tab-target="s-fn5g-news-1").s-fn5g-news__tab.is-active
+                            span.s-fn5g-news__tab-text
+                                | F
+                                span(style="color: #C7000B") A
+                                | 5G
+
+                        +tab()(data-tab-target="s-fn5g-news-2").s-fn5g-news__tab
+                            span.s-fn5g-news__tab-text
+                                | F
+                                span(style="color: #C7000B") T
+                                | 5G
+                                
+                        +tab()(data-tab-target="s-fn5g-news-3").s-fn5g-news__tab
+                            span.s-fn5g-news__tab-text
+                                | F
+                                span(style="color: #C7000B") I
+                                | 5G
+                    
+
+                    +tabs-content.s-fn5g-news__tabs-content
+                        +tab-wrapper()(data-tab="s-fn5g-news-1" data-tab-group="s-fn5g-news").s-fn5g-news__content-wrapper.is-active
+                            +b.s-fn5g-news-items
+                                +e.slider-wrap
+                                    +e.slider.js-s-fn5g-news-slider
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-0.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                      
+
+                                +e.bottom
+                                    +e.controls
+                                        +e.controls-left
+                                            +b.A.B.btn-arrow.--right.js-slider-prev(href="#")
+                                                +icon('arrow-left')
+
+                                        +e.controls-right
+                                            +b.A.B.btn-arrow.--right.js-slider-next(href="#")
+                                                +icon('arrow-right')                            
+
+                                +e.more
+                                    +e.A.more-link.btn.--geom-lg.--theme-grey-transparent.js-s-fn5g-news-more-btn(href="#") Показать ещё
+
+
+                        +tab-wrapper()(data-tab="s-fn5g-news-2" data-tab-group="s-fn5g-news").s-fn5g-news__content-wrapper
+                            +b.s-fn5g-news-items
+                                +e.slider-wrap
+                                    +e.slider.js-s-fn5g-news-slider
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-0.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                +e.bottom
+                                    +e.controls
+                                        +e.controls-left
+                                            +b.A.B.btn-arrow.--right.js-slider-prev(href="#")
+                                                +icon('arrow-left')
+
+                                        +e.controls-right
+                                            +b.A.B.btn-arrow.--right.js-slider-next(href="#")
+                                                +icon('arrow-right')                            
+
+                                +e.more
+                                    +e.A.more-link.btn.--geom-lg.--theme-grey-transparent.js-s-fn5g-news-more-btn(href="#") Показать ещё
+
+                            
+                        +tab-wrapper()(data-tab="s-fn5g-news-3" data-tab-group="s-fn5g-news").s-fn5g-news__content-wrapper
+                            +b.s-fn5g-news-items
+                                +e.slider-wrap
+                                    +e.slider.js-s-fn5g-news-slider
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-0.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei и China Mobile реализовали первый в отрасли пилотный проект Liquid OTN для сети метро', 
+                                                'img/carrier/news/news-fn5g-1.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                        +e.slider-item
+                                            +newsListingItem2(
+                                                'Huawei помогает построить оптические сети с оптимальной стоимостью за бит', 
+                                                'img/carrier/news/news-fn5g-2.jpg', 
+                                                '436',
+                                                '360'
+                                            )
+
+                                +e.bottom
+                                    +e.controls
+                                        +e.controls-left
+                                            +b.A.B.btn-arrow.--right.js-slider-prev(href="#")
+                                                +icon('arrow-left')
+
+                                        +e.controls-right
+                                            +b.A.B.btn-arrow.--right.js-slider-next(href="#")
+                                                +icon('arrow-right')                            
+
+                                +e.more
+                                    +e.A.more-link.btn.--geom-lg.--theme-grey-transparent.js-s-fn5g-news-more-btn(href="#") Показать ещё
+
+
+
+            +b.SECTION.s-fn5g-mevents
+                .container
+                   
+                    +e.title
+                        +b.H2.sr-sec-title.--center Marketing Events
+
+                    +e.items
+                        +e.items-row.row
+                            +e.items-col.col-12.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Сочи, Красная поляна', 
+                                    'img/events/news-listing-3.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Cape Town, South Africa', 
+                                    'img/events/news-listing-4.jpg', 
+                                    '436',
+                                    '210',
+                                    ''
+                                )
+
+                            +e.items-col.col-12.col-lg-4
+                                +eventsListingItem(
+                                    'Huawei Connect 2020', 
+                                    '', 
+                                    'Moscow (On-line)', 
+                                    'img/events/news-listing-5.jpg', 
+                                    '436',
+                                    '210',
+                                    'Трансляция'
+                                )
+                                
+                    +e.more
+                        +e.A.more-link.btn.--geom-lg.--theme-grey-transparent(href="/events.html") Все мероприятия
+
+
+

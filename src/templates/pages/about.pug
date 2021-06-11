@@ -1,0 +1,117 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "О Huawei"
+
+block content
+    main.main
+        +b.p-about
+            //- +aboutSectionBanner
+            +b.SECTION.s-common-banner.--light
+                +e.IMG.img(src="img/about/about-banner.jpg")
+                +e.container.container
+                    +e.box
+                        +e.H2.title О Huawei 
+                        +e.text.text
+                            p Создаем ценность для наших клиентов. Способствуем развитию отрасли. Стимулируем экономический рост.
+ 
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs([], title)
+
+                    +e.H2.title Кто мы?
+
+                    +e.content-box
+                        +e.text-1.text
+                            p Компания Huawei, основанная в 1987 году, является ведущим глобальным поставщиком ИКТ-инфраструктуры и интеллектуальных устройств. У нас более 194 000 сотрудников, мы работаем в более чем 170 странах и регионах, обслуживая более трех миллиардов человек по всему миру. Мы стремимся предоставить цифровые технологии каждому человеку, дому и организации для создания полностью подключенного интеллектуального мира. Чтобы реализовать эту цель, мы делаем следующее:
+                            ul
+                                li Помогаем достичь повсеместной «подключенности» и продвигаем равенство в доступе к сетям во всем мире; 
+                                li Обеспечиваем максимальную вычислительную мощность, благодаря которой облачные и интеллектуальные технологии могут проникнуть во все отрасли и сферы деятельности человека;
+                                li Создаем цифровые платформы, чтобы помочь всем отраслям и организациям стать более гибкими, эффективными и динамичными; 
+                                li Меняем пользовательский опыт с помощью ИИ, делая его его более персонализированным для людей во всех сценариях, будь то дома, на работе или в дороге.
+                        
+                        +e.text-1-toggle.toggle-text-button-wrap
+                            +b.BUTTON.toggle-text-button.js-toggle-text(data-target=".p-about__text-1" data-max-height="288" data-label-open="Развернуть" data-label-close="Свернуть")
+                                +e.SPAN.text.js-toggle-text-label Развернуть
+                                +e.SPAN.arrow
+                                    +icon('arrow-down-2')
+
+   
+                        +e.who-us
+                            +tabs.who-us-tabs
+                                +tab()(data-tab-target="who-us-tab-1").who-us-tabs__tab
+                                    span.who-us-tabs__tab-icon
+                                        svg.svg-icon.who-us-tabs__tab-icon-img.who-us-tabs__tab-icon-img--first
+                                            use(xlink:href="img/about/tabs-icons.svg#icon-1")
+                                    span.who-us-tabs__tab-text
+                                        | Кто владеет
+                                        br
+                                        | Huawei
+
+                                +tab()(data-tab-target="who-us-tab-2").who-us-tabs__tab.is-active
+                                    span.who-us-tabs__tab-icon
+                                        svg.svg-icon.who-us-tabs__tab-icon-img.who-us-tabs__tab-icon-img--second
+                                            use(xlink:href="img/about/tabs-icons.svg#icon-2")
+                                    span.who-us-tabs__tab-text
+                                        | Кто контролирует
+                                        br
+                                        | Huawei
+                                        
+                                +tab()(data-tab-target="who-us-tab-3").who-us-tabs__tab
+                                    span.who-us-tabs__tab-icon
+                                        svg.svg-icon.who-us-tabs__tab-icon-img.who-us-tabs__tab-icon-img--third
+                                            use(xlink:href="img/about/tabs-icons.svg#icon-3")
+                                    span.who-us-tabs__tab-text
+                                        | Кто работает
+                                        br
+                                        | с Huawei
+                                
+                            +tabs-content.who-us-tabs__content
+                                +tab-wrapper()(data-tab="who-us-tab-1" data-tab-group="who-us-tabs").who-us-tabs__content-wrapper
+                                    +e.tabs-text.--first.text
+                                        p  Huawei - это частная компания, полностью принадлежащая ее сотрудникам. Через контролирующую организацию Union of Huawei Investment & Holding Co., Ltd. мы реализуем схему владения акциями сотрудников, в которой участвуют 104 572 сотрудника. Только сотрудники Huawei имеют право участвовать в ней. Никакие государственные учреждения или сторонние организации не владеют акциями Huawei.
+                                    
+                                    +e.tabs-text-toggle.toggle-text-button-wrap
+                                        +b.BUTTON.toggle-text-button.js-toggle-text(data-target=".p-about__tabs-text--first" data-max-height="310" data-label-open="Развернуть" data-label-close="Свернуть")
+                                            +e.SPAN.text.js-toggle-text-label Развернуть
+                                            +e.SPAN.arrow
+                                                +icon('arrow-down-2')
+
+                                +tab-wrapper()(data-tab="who-us-tab-2" data-tab-group="who-us-tabs").who-us-tabs__content-wrapper.is-active
+                                    +e.tabs-text.--second.text
+                                        p У Huawei надежная система корпоративного управления. Сотрудники, владеющие акциями, избирают 115 представителей для формирования Комиссии наших представителей. Затем эта комиссия избирает председателя совета директоров и остальных 16 директоров. Совет директоров избирает четырех заместителей председателя и трех исполнительных директоров. Три заместителя председателя по очереди исполняют обязанности председателя компании.
+                                        p Сменяющийся председатель возглавляет Совет директоров и его Исполнительный комитет, когда он находится в должности. Совет директоров принимает решения по корпоративной стратегии и управлению операциями и является высшим органом, отвечающим за корпоративную стратегию, управление операциями и удовлетворение потребностей клиентов.
+                                        p Председатель правления возглавляет комиссию представителей. Как высший руководящий орган Huawei Комиссия принимает решения по основным вопросам компании, таким как распределение прибыли, увеличение капитала и выборы членов Совета директоров и Наблюдательного совета.
+                                    
+                                    +e.tabs-text-toggle.toggle-text-button-wrap
+                                        +b.BUTTON.toggle-text-button.js-toggle-text(data-target=".p-about__tabs-text--second" data-max-height="310" data-label-open="Развернуть" data-label-close="Свернуть")
+                                            +e.SPAN.text.js-toggle-text-label Развернуть
+                                            +e.SPAN.arrow
+                                                +icon('arrow-down-2')
+
+                                +tab-wrapper()(data-tab="who-us-tab-3" data-tab-group="who-us-tabs").who-us-tabs__content-wrapper
+                                    +e.tabs-text.--third.text
+                                        p Во внешней деятельности мы полагаемся на наших клиентов и партнеров. Клиенты находятся в центре всего, что мы делаем, и мы создаем для них ценность с помощью инновационных продуктов. Во внутренней деятельности мы полагаемся на наших трудолюбивых и преданных делу сотрудников. Их вклад всегда справедливо вознаграждается: в Huawei те, кто делают больше, получают больше.
+                                        p Мы работаем с заинтересованными сторонами, включая поставщиков, партнеров, отраслевые организации, сообщества с открытым исходным кодом, организации по стандартизации, университеты и исследовательские институты по всему миру, чтобы создать широкую экосистему, которая процветает за счет общего успеха. Таким образом, мы можем способствовать развитию технологий и развитию отрасли в целом.
+                                        p Мы создаем местные возможности для трудоустройства, платим налоги и соблюдаем все применимые законы и постановления в странах, где мы работаем. Мы также помогаем местной промышленности перейти на цифровые технологии и открыто взаимодействуем с правительствами и СМИ.
+                                    
+                                    +e.tabs-text-toggle.toggle-text-button-wrap
+                                        +b.BUTTON.toggle-text-button.js-toggle-text(data-target=".p-about__tabs-text--third" data-max-height="310" data-label-open="Развернуть" data-label-close="Свернуть")
+                                            +e.SPAN.text.js-toggle-text-label Развернуть
+                                            +e.SPAN.arrow
+                                                +icon('arrow-down-2')
+
+
+
+                +aboutSectionResponsibility
+
+
+
+
+    +sectionFeedback
+
+
+

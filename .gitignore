@@ -1,0 +1,20 @@
+/.git/
+/build/
+/design/
+/node_modules/
+/**/Thumbs.db
+/**/*.DS_Store
+.idea
+*.docx
+
+# Ignore everything
+# *
+
+# But not these files...
+# !.gitignore
+# !readme
+# !src
+# !gulpfile.js
+# !package.json
+# !README.md
+# !.npmrc

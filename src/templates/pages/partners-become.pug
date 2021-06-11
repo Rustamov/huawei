@@ -1,0 +1,110 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Стать партнером"
+
+block content
+    main.main
+        +b.p-partners
+
+            +e.main
+                .container
+                    .breadcrumbs-block   
+                        +breadcrumbs(['Партнеры'], title)
+
+                    .s-partners-steps__title.H1 Контактная информация
+
+                    .text
+                        p Для вступления в партнерскую программу Huawei обращайтесь к соответствующим специалистам, указанным ниже.
+
+                        .table-become-partner
+                            table
+                                thead
+                                    tr
+                                        th(width="27%") Вид партнерства
+                                        th(width="27%") Контактное лицо
+                                        th Контакты
+
+                                tbody
+                                    tr
+
+                                        th
+                                            b Партнеры по продажам
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Интеграторы
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Сертифицированные сервисные партнеры
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Партнеры по обучению (HALP)
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Партнеры по обучению (ИКТ Academy Huawei)
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Партнеры по финансовым операциям
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Социальные партнеры
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Индустриальные партнеры
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Партнерская программа по Kunpeng
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+                                    tr
+
+                                        th
+                                            b Партнерская программа по Ascend
+                                        td Фамилия Имя Отчество
+                                        td
+                                            a(href="#") zhangmingfei@huawei.com
+
+
+
+                    .p-partners__pagination
+                        a(href="javascript:void(0)").pagination--prev.disabled Вернуться
+                        span
+                        a(href="javascript:void(0)").pagination--next Все виды партнёрства
+        +sectionFeedback
+            
+
+

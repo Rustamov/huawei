@@ -1,0 +1,325 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Карьера с Huawei"
+
+block content
+    main.main
+        +b.p-hr
+            +b.SECTION.s-hr-banner
+                picture
+                    source(srcset="img/hr/banner-img-lg.jpg" media="(max-width: 992px) and (min-width: 768px)")
+                    source(srcset="img/hr/banner-img-md.jpg" media="(max-width: 768px) and (min-width: 576px)")
+                    source(srcset="img/hr/banner-img-sm.jpg" media="(max-width: 576px)")
+
+                    +e.IMG.img(srcset="img/hr/banner-img.jpg" alt="Карьера с Huawei")
+
+                +e.container.container
+                    +e.box
+                        +e.H1.title Карьера с Huawei
+                        +e.text
+                            p 
+                                | Работа в Huawei — это вызовы каждый день. Здесь вас ждут интересные проекты, работа с новейшими технологиями и разработками, постоянное совершенствование, возможность улучшать жизнь людей по всему миру. Нам нужны близкие по духу люди, умеющие преодолевать трудности и быть частью успешной команды.
+
+
+            +b.SECTION.s-hr-opportunity
+                .container
+                    
+                    +e.title
+                        +b.H2.hr-sec-title.--center
+                            | Открываем новые возможности
+
+                    +e.text-1.text
+                        p Каждый год мы нанимаем лучших выпускников технических специальностей и даем им возможность строить или развивать карьеру в ИКТ индустрии.
+                        
+                    +e.box
+                        +e.box-content
+                            +e.SPAN.box-img-wrap
+                                picture
+                                    source(srcset="img/hr/opportunity-lg.jpg" media="(max-width: 1200px) and (min-width: 576px)")
+                                    source(srcset="img/hr/opportunity-sm.jpg" media="(max-width: 576px)")
+                                    +e.IMG.box-img(src="img/hr/opportunity.jpg")
+                            
+                            +e.box-content-right
+                                +e.box-text.text
+                                    h3 Чем ты будешь заниматься
+                                    p Сначала ты пройдешь обучение по нашим продуктам и решениям в техническом департаменте. Будешь работать над реальными проектами и изучать продукты. Этот этап занимает от 3 до 6 месяцев.
+                                    p А потом ты сможешь попробовать себя в департаменте продаж, маркетинга или продолжить свое развитие в качестве инженера!
+                                    +e.SPAN.box-text-clear
+                                    h3 Требования к участникам
+                                    ul
+                                        li Выпускник технической специальности 2018/2019/2020 года (преимущественно телеком и IT).
+                                        li Владение английским языком на уровне upper-intermediate и выше.
+                                        li Готовность к интенсивной работе.
+                                        li Возможность работать в Москве.
+                                        li Структурированность, ответственность, лидерский потенциал.
+                                    h3 Мы предлагаем
+                                    p Высокий уровень компенсации и возможности для роста и развития в международной команде профессионалов
+
+                                +e.button-wrap
+                                    // +e.A.button.btn.--geom-lg.--theme-red(data-fancybox="" data-type="ajax" data-src="/popups/hr-resume.html" href="#") Загрузить резюме
+                                    +e.A.button.btn.--geom-lg.--theme-red(data-fancybox="" href="#popup-hr-resume") Загрузить резюме
+                                +popupHrResume
+                            
+
+                        
+            +b.SECTION.s-hr-values
+                .container
+                   
+                    +e.title
+                        +b.H2.hr-sec-title.--center Наши ценности
+
+                    +e.slider-wrap
+                        +e.slider.js-s-hr-values-slider
+                            +e.slider-item
+                                +b.s-hr-values-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/hr/values-0.jpg" alt="Ориентация на клиента" )
+                                    +e.title Ориентация на клиента
+                                    +e.text.text
+                                        p Основатель компании Жэнь Чжэнфэй говорит: «Клиенты — душа и сердце Huawei». Искренняя заинтересованность и желание помочь клиенту — то, что отличает нас и дает значительное преимущество.
+           
+                            +e.slider-item
+                                +b.s-hr-values-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/hr/values-1.jpg" alt="Вовлеченность" width="320" height="256")
+                                    +e.title Вовлеченность
+                                    +e.text.text
+                                        p Мир меняется каждый день. Компания и сотрудники меняются вместе с ним. Это требует постоянного развития, пополнения запаса знаний и опыта. Именно вовлеченность и интерес к нашему общему делу помогают нам двигаться вперед.
+           
+                            +e.slider-item
+                                +b.s-hr-values-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/hr/values-2.jpg" alt="Критический взгляд на бизнес" width="320" height="256")
+                                    +e.title Критический взгляд на бизнес
+                                    +e.text.text
+                                        p Непредвзятость, свежий взгляд на мир и окружение позволяют критически оценивать собственные сильные и слабые стороны. Объективная оценка важна при любых обстоятельствах.
+           
+                            +e.slider-item
+                                +b.s-hr-values-item
+                                    +e.img-wrap
+                                        +e.IMG.img(src="img/hr/values-3.jpg" alt="Настойчивость в достижении целей" width="320" height="256")
+                                    +e.title Настойчивость в достижении целей
+                                    +e.text.text
+                                        p Непредвзятость, свежий взгляд на мир и окружение позволяют критически оценивать собственные сильные и слабые стороны. Объективная оценка важна при любых обстоятельствах.
+
+                    +e.bottom
+                        +e.controls
+                            +e.controls-left
+                                +b.A.B.btn-arrow.--right.js-slider-prev(href="#")
+                                    +icon('arrow-left')
+
+                            +e.controls-right
+                                +b.A.B.btn-arrow.--right.js-slider-next(href="#")
+                                    +icon('arrow-right')
+      
+            +b.SECTION.s-hr-advantages
+                .container
+                    +e.title
+                        +b.H2.hr-sec-title.--center Наши преимущества
+
+                    +e.items
+                        +e.items-row
+                            +e.items-col
+                                +b.s-hr-advantages-item
+                                    +e.img-wrap
+                                        +e.IMG.img.--first(src="img/hr/advantages-0.svg" alt="Рост и развитие" )
+                                    +e.title Рост и развитие
+                                    +e.text.text
+                                        p Мы — международная команда профессионалов, в которой вы сможете расти и строить карьеру.
+                            +e.items-col
+                                +b.s-hr-advantages-item
+                                    +e.img-wrap
+                                        +e.IMG.img.--second(src="img/hr/advantages-1.svg" alt="Стабильность" )
+                                    +e.title Стабильность
+                                    +e.text.text
+                                       p Мы способствуем развитию отрасли более 20 лет на российском рынке и более 30 — на глобальном.
+
+                            +e.items-col
+                                +b.s-hr-advantages-item
+                                    +e.img-wrap
+                                        +e.IMG.img.--third(src="img/hr/advantages-2.svg" alt="Вознаграждение" )
+                                    +e.title Вознаграждение
+                                    +e.text.text
+                                        p Расширенный компенсационный пакет: система бонусов, ДМС, корпоративная связь, скидки на продукцию и фитнес.
+           
+                            +e.items-col
+                                +b.s-hr-advantages-item
+                                    +e.img-wrap
+                                        +e.IMG.img.--fourth(src="img/hr/advantages-3.svg" alt="Широкая география" )
+                                    +e.title Широкая география
+                                    +e.text.text
+                                        p Несколько офисов в России, научно- исследовательские и учебные центры, центры техподдержки и управления сетями.
+           
+            +b.SECTION.s-hr-jobs
+                .container                    
+                    +e.title
+                        +b.H2.hr-sec-title.--center
+                            | Открытые вакансии
+
+                    +e.box
+                        +e.box-left
+                            +e.SPAN.box-img-wrap
+                                picture
+                                    +e.IMG.box-img(src="img/hr/jobs.png")
+                            
+                        +e.box-right
+                            +e.text-1.text
+                                p В нашей интернациональной команде работают настоящие эксперты Telecom рынка, а специалисты в области исследований и разработок создают инновационные продукты в инновационных направлениях.
+
+                            +e.hh
+                                +e.hh-left
+                                    +e.hh-title Все вакансии представлены на hh.ru
+                                    +e.hh-text.text
+                                        p Подробное описание и требования к кандидатам
+                                +e.hh-right
+                                    +e.A.hh-img-wrap(href="//hh.ru/employer/2873" target="_blank")
+                                        +e.IMG.hh-img(src="img/hr/jobs-hh.png")
+
+
+                            +e.button-wrap
+                                +e.A.button.btn.--geom-lg.--theme-red(href="//hh.ru/employer/2873" target="_blank") Смотреть вакансии
+                            
+
+
+            +b.SECTION.s-hr-reviews
+                .container
+                   
+                    +e.title
+                        +b.H2.hr-sec-title.--center Отзывы
+
+                    +e.slider-wrap
+                        +e.slider.js-s-hr-reviews-slider
+                            //- +e.slider-item
+                            //-     +e.slider-item-row
+                            //-         +e.slider-item-col
+                            //-             +b.s-hr-reviews-item
+                            //-                 +e.SPAN.left
+                            //-                     +e.SPAN.img-wrap
+                            //-                         +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                            //-                 +e.SPAN.right
+                            //-                     +e.text.text
+                            //-                         p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                            //-                     +e.SPAN.link-wrap
+                            //-                         +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                                    
+                            //-                     +e.SPAN.title Дмитрий Куликов
+                            //-                     +e.SPAN.post Delivery and Service Department
+
+                            //-         +e.slider-item-col
+                            //-             +b.s-hr-reviews-item
+                            //-                 +e.SPAN.left
+                            //-                     +e.SPAN.img-wrap
+                            //-                         +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                            //-                 +e.SPAN.right
+                            //-                     +e.text.text
+                            //-                         p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                            //-                     +e.SPAN.link-wrap
+                            //-                         +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                                    
+                            //-                     +e.SPAN.title Дмитрий Куликов
+                            //-                     +e.SPAN.post Delivery and Service Department
+
+                                                
+                            +e.slider-item
+                                +b.s-hr-reviews-item
+                                    +e.SPAN.left
+                                        +e.SPAN.img-wrap
+                                            +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                                    +e.SPAN.right
+                                        +e.text.text
+                                            p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                                        +e.SPAN.link-wrap
+                                            +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                            
+                                        +e.SPAN.title Дмитрий Куликов
+                                        +e.SPAN.post Delivery and Service Department
+
+                            +e.slider-item
+                                +b.s-hr-reviews-item
+                                    +e.SPAN.left
+                                        +e.SPAN.img-wrap
+                                            +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                                    +e.SPAN.right
+                                        +e.text.text
+                                            p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                                        +e.SPAN.link-wrap
+                                            +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                            
+                                        +e.SPAN.title Дмитрий Куликов
+                                        +e.SPAN.post Delivery and Service Department
+
+                            +e.slider-item
+                                +b.s-hr-reviews-item
+                                    +e.SPAN.left
+                                        +e.SPAN.img-wrap
+                                            +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                                    +e.SPAN.right
+                                        +e.text.text
+                                            p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                                        +e.SPAN.link-wrap
+                                            +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                            
+                                        +e.SPAN.title Дмитрий Куликов
+                                        +e.SPAN.post Delivery and Service Department
+
+                            +e.slider-item
+                                +b.s-hr-reviews-item
+                                    +e.SPAN.left
+                                        +e.SPAN.img-wrap
+                                            +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                                    +e.SPAN.right
+                                        +e.text.text
+                                            p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                                        +e.SPAN.link-wrap
+                                            +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                            
+                                        +e.SPAN.title Дмитрий Куликов
+                                        +e.SPAN.post Delivery and Service Department
+
+                            +e.slider-item
+                                +b.s-hr-reviews-item
+                                    +e.SPAN.left
+                                        +e.SPAN.img-wrap
+                                            +e.IMG.img(src="img/hr/review-avatar-0.jpg" alt="Дмитрий Куликов" width="80" height="80")
+                                    +e.SPAN.right
+                                        +e.text.text
+                                            p Я пришел в компанию Huawei в мае 2017 года. На второй день меня пригласили на постоянно организуемый компанией тренинг для новых сотрудников. Это мероприятие позволило мне сразу разобраться в большинстве процессов и кросс-коммуникаций в компании. С первых дней был взят высокий темп ... 
+                                        +e.SPAN.link-wrap
+                                            +e.A.link.js-hr-review-popup(href="/popups/hr-review.html") Читать полностью
+                                            
+                                        +e.SPAN.title Дмитрий Куликов
+                                        +e.SPAN.post Delivery and Service Department
+
+                                   
+
+                    +e.bottom
+                        +e.controls
+                            +e.controls-left
+                                +b.A.B.btn-arrow.--right.js-slider-prev(href="#")
+                                    +icon('arrow-left')
+
+                            +e.controls-right
+                                +b.A.B.btn-arrow.--right.js-slider-next(href="#")
+                                    +icon('arrow-right')
+
+
+            +b.SECTION.s-hr-team
+                .container
+
+                    +e.box
+                        +e.box-left
+                            +e.title
+                                +b.H2.hr-sec-title Команда
+                            +e.text.text
+                                p Большая и интернациональная команда Huawei — настоящая семья. Мы вместе отмечаем праздники и дни рождения, устраиваем корпоративные вечеринки и участвуем в спортивных соревнованиях. Мы помогаем и поддерживаем друг друга, доверяем и сотрудничаем, решая общие задачи на пути построения полностью интеллектуального мира коммуникаций без границ.
+
+                        +e.box-right
+                            +e.video
+                                iframe(width="560" height="315" src="https://www.youtube.com/embed/tF5_Pmx2dAo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+                                
+
+
+
+

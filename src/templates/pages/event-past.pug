@@ -1,0 +1,44 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Прошедшее мероприятие"
+
+block content
+    main.main
+        +b.p-event-past
+            //- +eventsSectionBanner
+        
+            +b.SECTION.s-common-banner.--light
+                picture
+                    +e.IMG.img(src="img/events/events-banner.jpg")
+
+                +e.container.container
+                    +e.box
+                        +e.box
+                            +e.H1.title 
+                                | Навзвание мероприятия
+                            +e.text.text
+                                | Главная тема мероприятия
+                                br
+                                br
+                                | 30 Сен - 02 Окт | Россия, Москва
+                            +e.buttons.row
+                                +e.buttons-item.col-auto 
+                                    +e.A.link.btn.--geom-lg.--theme-red(href="#") Кнопка
+                                +e.buttons-item.col-auto
+                                    +e.A.link.btn.--geom-lg.--theme-transparent(href="file.pdf" download)
+                                        +icon('download')
+                                        | Кнопка
+
+            +e.main
+                .container
+                    .breadcrumbs-block
+                        +breadcrumbs(['События'], title)
+
+
+
+    +sectionFeedback
+
+
+

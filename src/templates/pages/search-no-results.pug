@@ -1,0 +1,26 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Поиск не дал результатов"
+
+block content
+    main.main
+        +b.p-search
+            +e.main
+                .container
+                    form(action="#" method="post" )
+                        +e.fields-col.search-wrap
+                            span.input-text-wrap
+                                input.search-input(type="text" placeholder="Поиск")
+                                button(type="submit").search-btn
+                                    +icon('search-2')
+                    +e.count 0/0
+                    +e.results
+                     .no-results Поиск не дал результатов
+         
+                    // content
+
+            
+
+

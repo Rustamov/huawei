@@ -1,0 +1,40 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face('Huawei', '../fonts/Huawei/HuaweiSans-Thin', 100, 'normal');
+@include font-face('Huawei', '../fonts/Huawei/HuaweiSans-Light', 300, 'normal');
+@include font-face('Huawei', '../fonts/Huawei/HuaweiSans-Regular', 400, 'normal');
+@include font-face('Huawei', '../fonts/Huawei/HuaweiSans-Medium', 500, 'normal');
+@include font-face('Huawei', '../fonts/Huawei/HuaweiSans-Bold', 700, 'normal');
+
+
+
+
+
+
+
+/*
+Миксин для подключения шрифтов.
+Описание в файле _fonts.scss
+*/
+// @mixin font-face($name, $style, $weight, $fontname) {
+//   $path: '../fonts/';
+
+//   @font-face {
+//     font-family: $name;
+//     font-style: $style;
+//     font-weight: $weight;
+//     src:
+//       url('' + $path + $fontname + '.woff2') format('woff2'),
+//       url('' + $path + $fontname + '.woff') format('woff'),
+//   }
+// }

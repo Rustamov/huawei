@@ -1,0 +1,1527 @@
+.hr-sec-title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: calc(38/30);
+    font-weight: 700;
+
+    @include screen ('md', 'max') {
+        font-size: 20px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 33.333333%;
+        height: 2px;
+        background: $colorRed;
+
+        left: 0;
+        top: 100%;
+        margin-top: 7px;
+
+        @include screen ('lg', 'max') {
+            width: 70px;
+        }
+        @include screen ('md', 'max') {
+            width: 65px;
+        }
+    }
+
+    &--center::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &--wide::after {
+        width: 230px;
+        @include screen ('lg', 'max') {
+            width: 230px;
+        }
+        @include screen ('md', 'max') {
+            width: 80px;
+        }
+    }
+    &--no-bd::after {
+        content: none;
+        display: none;
+    }
+
+}
+
+
+.s-hr-banner {
+    position: relative;
+    margin: 0;
+    padding: 140px 0 10px;
+    overflow: hidden;
+    min-height: 600px;
+ 
+    color: $colorBlack;
+    background: #f7f9fb;
+  
+    &--light {
+      color: #fff;
+      background: $colorGreyDark;
+    }
+  
+    @include screen ('xl', 'max') {
+      min-height: 400px;
+      padding-top: 66px;
+    }
+    @include screen ('md', 'max') {
+      min-height: 400px;
+      padding-top: 25px;
+      padding-bottom: 61%;
+    }
+  
+    &__container {
+      position: relative;
+    }
+    &__box {    
+    }
+    &__title {
+      max-width: 640px;
+      display: block;
+      margin: 0 0 20px;
+      font-size: 44px;
+      line-height: calc(52 / 44);
+      font-weight: 500;
+  
+      @include screen ('xl', 'max') {
+        font-size: 36px;
+      }
+  
+      @include screen ('lg', 'max') {
+        font-size: 24px;
+        margin-bottom: 27px;
+      }
+
+      @include screen ('md', 'max') {
+        max-width: 100%;
+        margin-bottom: 20px;
+       }
+    }
+    &__text {
+      display: block;
+      max-width: 600px;
+      margin: 0 0 30px;
+      font-size: 20px;
+      line-height: 1.5 ;
+      font-weight: 400;
+      &.small-text {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+  
+      @include screen ('xl', 'max') {
+        font-size: 16px;
+        max-width: 360px;
+      }
+      @include screen ('md', 'max') {
+        max-width: 100%;
+       }
+       @include screen ('sm', 'max') {
+           font-size: 14px;
+       }
+    }
+    &__link {
+      .svg-icon {
+        width: 20px;
+        height: 13px;
+      }
+    }
+    &__img {
+      @include fill-img;
+
+      @include screen ('md', 'max') {
+        object-fit: initial;
+        top: auto;
+        min-height: auto;
+        bottom: 0;
+      }
+    }
+  
+    &__buttons {
+      // display: flex;
+  
+      @extend .row-mt-20;
+  
+      @include screen ('sm', 'max') {
+        justify-content: center;
+      }
+  
+  
+      &-item {
+  
+      }
+    }
+  
+    &__links-wrap {
+  
+      @include screen ('sm', 'max') {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
+    &__br {
+      display: block; 
+    }
+  
+  }
+
+
+.s-hr-opportunity {
+    padding: 60px 0 85px;
+    background: #F8F8F8;
+
+    @include screen ('xl', 'max') {
+        padding: 60px 0 45px;
+    }
+    @include screen ('sm', 'max') {
+        padding: 35px 0 45px;
+    }
+
+    &__title {
+        margin: 0 0 70px;
+        display: flex;
+        justify-content: center;
+        
+        @include screen ('xl', 'max') {
+            margin-bottom: 50px;
+        }
+        @include screen ('sm', 'max') {
+            margin-bottom: 32px;
+        }
+    }
+    &__text-1 {
+        max-width: 750px;
+        margin: 0 auto 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        color: $colorGreyDark;
+
+        // @include screen ('xl', 'max') {
+        //     font-size: 20px;
+        // }
+        @include screen ('md', 'max') {
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+    }
+    &__box {
+        position: relative;
+        padding: 0;
+
+        @include screen ('xl', 'max') {
+            padding: 0;
+        }
+
+        @include screen ('md', 'max') {
+            // margin: 0 calc((100vw - 510px) / -2) ;
+        }
+        @include screen ('sm', 'max') {
+            // margin: 0 -15px;
+            // padding: 30px 15px;
+        }
+
+
+        &-content {
+            position: relative;
+
+          
+
+            &-right {
+                margin-left: 49%;
+                padding-left: 30px;
+                min-height: 560px;
+
+                @include screen ('xl', 'max') {
+                    margin-left: 36%;
+                }
+                @include screen ('lg', 'max') {
+                    min-height: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        &-img {
+            &-wrap {
+                position: absolute;
+                width: 49%;
+                top: 0;
+                left: 0;
+
+                @include screen ('xl', 'max') {
+                    width: 36%;
+                }
+
+                @include screen ('lg', 'max') {
+                    position: relative;
+                    width: 234px;
+                    float: left;
+                    margin: 0 28px 20px 0;
+                }
+
+                @include screen ('md', 'max') {
+                    width: 200px;
+                }
+                @include screen ('sm', 'max') {
+                    width: 100%;
+                    margin: 0 0 15px;
+                }
+            }
+
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        
+        &-text {
+            max-width: 640px;
+            margin: 0 0 15px;
+            // margin-left: 49%;
+            font-size: 18px;
+            line-height: 1.4;
+            color: $colorGreyDark;
+
+            @include screen ('xl', 'max') {
+                font-size: 16px;
+            }
+            @include screen ('md', 'max') {
+                margin-bottom: 25px;
+                font-size: 12px;
+            }
+
+            &-clear {
+                @include screen ('lg', 'max') {
+                    display: block;
+                    overflow: hidden;
+                    width: 100%;
+                    &::after {
+                        content: '';
+                        display: table;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                color: $colorBlack;
+
+                @include screen ('md', 'max') {
+                    font-size: 16px;
+                }
+            }
+
+            ul {
+                margin: 0.6em 0;
+                li {
+                    &::before {
+                        top: 0.55em;
+                        background: $colorRed;
+                    }
+                }
+            }
+
+            p {
+                margin: 0.6em 0;
+            }
+        }
+    }
+
+    &__button {
+        @include screen ('sm', 'max') {
+            min-width: 260px;
+        }
+
+        &-wrap {
+            @include screen ('sm', 'max') {
+                
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+}
+
+.s-hr-values {
+    padding: 70px 0;
+    background: #ffffff;
+    // background: linear-gradient(to bottom,  #F8F8F8 0%,  #F8F8F8 40%, #ffffff 40%,#ffffff 100%);
+
+    @include screen ('xl', 'max') {
+        padding: 50px 0;
+    }
+    @include screen ('lg', 'max') {
+        // background: linear-gradient(to bottom,  #F8F8F8 0%,  #F8F8F8 65%, #ffffff 65%,#ffffff 100%);
+    }
+    @include screen ('md', 'max') { 
+        padding: 45px 0;
+
+    }
+
+    @include screen ('sm', 'max') {
+        // background: linear-gradient(to bottom,  #F8F8F8 0%, #ffffff 100%);
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        display: flex;
+        justify-content: center;
+
+        @include screen ('sm', 'max') {
+            margin-bottom: 50px;
+        }
+    }
+
+    &-item {
+        $b: &;
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+
+        @include screen ('sm', 'max') {
+        }
+
+        &__img {
+            &-wrap {
+                @extend .link-resset;
+
+                position: relative;
+                display: block;
+                width: 100%;
+                max-height: 300px;
+                margin: 0 0 18px;
+                overflow: hidden;
+                
+                &::after {
+                    content: '';
+                    display: block;
+                    padding-bottom: 80%;
+                }
+                
+                @include screen ('sm', 'max') {
+               
+                }
+            }
+
+            @include fill-img;
+        }
+
+
+        &__title {
+            display: block;
+            margin: 0 0 12px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.15;
+            color: $colorRed;
+
+            @include screen ('xl', 'max') {
+                font-size: 14px;
+            }
+            @include screen ('lg', 'max') {
+                font-size: 18px;
+            }
+        }
+
+        &__text {
+            display: block;
+            margin: 0;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.4;
+            color: $colorGreyDark;
+
+            @include screen ('xl', 'max') {
+                font-size: 12px;
+            }
+            @include screen ('lg', 'max') {
+                font-size: 16px;
+            }
+            @include screen ('md', 'max') {
+                font-size: 12px;
+            }
+
+            ul {
+                li {
+                    &::before {
+                        top: 0.5em;
+                        background: #C4C4C4;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    &__slider {
+        &-wrap {
+            margin: 0 0 40px;
+
+            @include screen ('xl', 'max') {
+                margin-bottom: 35px;
+            }
+            @include screen ('sm', 'max') {
+                margin-bottom: 20px;
+            }
+        }
+        
+        margin: 0 -15px;
+        
+        margin: -30px -15px 0 ;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include screen ('xl', 'max') {
+            margin: -30px -9px 0 ;
+        }
+        @include screen ('lg', 'max') {
+            margin: -30px -15px 0 ;
+        }
+        @include screen ('sm', 'max') {
+            margin: 0;
+        }
+        .slick-list {
+        }
+    
+
+        &-item {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            padding: 30px 15px 0;
+            
+            @include screen ('xl', 'max') {
+                padding: 30px 9px 0;
+            }
+            @include screen ('lg', 'max') {
+                width: 50%;
+                padding: 30px 15px 0;
+            }
+
+            @include screen ('sm', 'max') {
+                width: 100%;
+                padding: 0;
+
+                &:not(.slick-slide):not(:first-child) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    &__bottom {
+        display: none;
+        
+        @include screen ('sm', 'max') {
+            display: flex;
+        }
+        
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        &-right {
+            margin-left: 30px;
+        }
+    }
+}
+
+
+.s-hr-advantages {
+    padding: 70px 0;
+    background: #F8F8F8;
+
+    @include screen ('xl', 'max') {
+        padding: 60px 0;
+    }
+
+    @include screen ('md', 'max') {
+        padding: 35px 0 40px;
+    }
+
+
+    &__title {
+        margin: 0 0 60px;
+        display: flex;
+        justify-content: center;
+
+        @include screen ('xl', 'max') {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__items {
+        &-row {
+            // @extend .listing-row;  
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            margin: -30px -15px 0;
+
+            @include screen ('xl', 'max') {
+                margin: -20px -10px 0;
+
+            }      
+            @include screen ('lg', 'max') {
+                justify-content: space-between;
+            }
+
+
+        }
+
+        &-col {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            padding: 30px 15px 0;
+
+            @include screen ('xl', 'max') {
+                padding: 20px 10px 0;
+            }
+            @include screen ('lg', 'max') {
+                width: 45%;
+            }
+
+            @include screen ('md', 'max') {
+                width: 100%;
+            }
+
+        }
+    }
+
+
+    &-item {
+        $b: &;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0;
+        padding: 44px 32px 20px 32px;
+
+        background: #FFFFFF;
+        border: 1px solid $colorGreyLight;
+        box-shadow: 2px 2px 25px rgba(13, 13, 34, 0.05);
+        border-radius: 10px;
+
+        @include screen ('xll', 'max') {
+            padding: 32px 20px 20px;
+        }
+
+        @include screen ('lg', 'max') {
+            min-height: 60px;
+            padding: 18px 15px 18px 65px;
+        }
+
+
+        &__img {
+            &-wrap {
+                @extend .link-resset;
+
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 60px;
+                margin: 0 0 25px;
+                overflow: hidden;
+
+                @include screen ('xl', 'max') {
+                    height: 50px;
+                    margin-bottom: 15px;
+                }
+
+                @include screen ('lg', 'max') {
+                    position: absolute;
+                    top: 18px;
+                    left: 15px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            max-width: 100%;
+            max-height: 100%;
+            
+            
+            &--first {
+                width: 60px;
+                height: 56px;
+
+                @include screen ('xl', 'max') {
+                    width: 50px;
+                    height: 46px;
+                }
+                @include screen ('lg', 'max') {
+                    width: 40px;
+                    height: 38px;
+                }
+            }
+            &--second {
+                width: 58px;
+                height: 60px;
+
+                @include screen ('xl', 'max') {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include screen ('lg', 'max') {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &--third {
+                width: 59px;
+                height: 60px;
+
+                @include screen ('xl', 'max') {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include screen ('lg', 'max') {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &--fourth {
+                width: 60px;
+                height: 60px;
+
+                @include screen ('xl', 'max') {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include screen ('lg', 'max') {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+
+
+        }
+
+
+        &__title {
+            display: block;
+            margin: 0 0 12px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.2;
+            color: $colorBlack3;
+            
+            @include screen ('xl', 'max') {
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+
+        }
+
+        &__text {
+            display: block;
+            margin: 0;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.375;
+            color: $colorGrey;
+
+            @include screen ('xl', 'max') {
+                font-size: 12px;
+            }
+        }
+
+
+
+    }
+}
+
+
+
+.s-hr-jobs {
+    padding: 80px 0 70px;
+    background: #ffffff;
+
+    @include screen ('xl', 'max') {
+        padding: 60px 0 ;
+    }
+    @include screen ('sm', 'max') {
+        padding: 30px 0 40px;
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        display: flex;
+        justify-content: center;
+    }
+    &__text-1 {
+        max-width: 686px;
+        margin: 0 0 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: $colorGreyDark;
+
+        @include screen ('lg', 'max') {
+            margin-bottom: 17px;
+            font-size: 14px;
+        }
+        @include screen ('sm', 'max') {
+            text-align: center;
+        }
+    }
+    &__box {
+        position: relative;
+        display: flex;
+
+        @include screen ('xl', 'max') {
+            padding: 52px 28px ;
+        }
+
+        @include screen ('md', 'max') {
+            margin: 0 calc((100vw - 510px) / -2) ;
+            padding: 0 15px;
+        }
+        @include screen ('sm', 'max') {
+            margin: 0 -15px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        &-left {
+            width: 27%;
+            
+            @include screen ('sm', 'max') {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+            }
+        }
+        &-right {
+            width: 70%;
+            margin-left: 3%;
+            padding-left: 3%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            border-left: 1px solid $colorGreyLight;
+
+            @include screen ('sm', 'max') {
+                width: 100%;
+                border-left: none;
+                min-height: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-img {
+            &-wrap {
+                @extend .link-resset;
+                display: block;
+            }
+
+            width: 100%;
+            height: auto;
+            display: block;
+
+            @include screen ('sm', 'max') {
+                width: 196px;
+                height: 179px;
+            }
+        }
+
+        
+
+    }
+
+    &__hh {
+        display: flex;
+        align-items: center;
+        margin: 0 0 20px;
+
+        @include screen ('sm', 'max') {
+            text-align: center;
+            flex-direction: column;
+        }
+
+        &-left {
+            margin-right: 10%;
+
+            @include screen ('lg', 'max') {
+                margin-right: 5%;
+            }
+
+            @include screen ('sm', 'max') {
+                margin: 0 0 20px;
+            }
+        }
+
+        &-title {
+            margin: 0 0 3px;
+            font-size: 20px;
+            line-height: 1.5;
+            color: $colorBlack;
+            font-weight: 700;
+
+            @include screen ('xl', 'max') {
+                font-size: 16px;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: $colorGreyDark;
+
+            @include screen ('lg', 'max') {
+                font-size: 14px;
+            }
+        }
+
+        &-img {
+            &-wrap {
+                @extend .link-resset;
+                display: block;
+                width: 135px;
+
+                @include screen ('lg', 'max') {
+                    width: 107px;
+                }
+            }
+            
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__button {
+        min-width: 250px;
+        @include screen ('sm', 'max') {
+            width: 100%;
+        }
+
+        &-wrap {
+            @include screen ('sm', 'max') {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+}
+
+
+
+
+.s-hr-reviews {
+    padding: 76px 0;
+    background: #F8F8F8;
+    overflow: hidden;  
+
+    @include screen ('xl', 'max') {
+        padding: 60px 0 60px;
+
+    }
+
+    @include screen ('md', 'max') { 
+        padding: 35px 0;
+    }
+
+
+    &__title {
+        margin: 0 0 65px;
+        display: flex;
+        justify-content: center;
+
+        @include screen ('xl', 'max') {
+            margin-bottom: 54px;
+        }
+        @include screen ('sm', 'max') {
+            margin-bottom: 45px;
+        }
+    }
+
+    &-item {
+        $b: &;
+      
+        position: relative;
+        @extend .link-resset;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        @include screen ('sm', 'max') {
+            flex-direction: column;
+        }
+    
+      
+      
+      
+        
+        &__left {
+            width: 80px;
+            min-width: 80px;
+            
+        }
+        &__right {
+            position: relative;
+            margin: 0 0 0 30px;
+            padding: 32px 32px 24px 45px;
+            background: #FFFFFF;
+            border: 1px solid $colorGreyLight;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 25px rgba(13, 13, 34, 0.1);
+            border-radius: 10px;
+
+            @include screen ('xl', 'max') {
+                padding: 32px 32px 24px 38px;
+            }
+            @include screen ('sm', 'max') {
+                margin: 20px 0 0;
+                padding: 32px 20px 24px 20px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+
+                width: 18px;
+                height: 18px;
+
+               
+                transform: rotate(-45deg);
+                margin-top: 0;
+                background: #fff;
+
+                border-top: 1px solid $colorGreyLight;
+                border-left: 1px solid $colorGreyLight;
+
+                
+                right: 100%;
+                top: 30px;
+                margin-right: -8px;
+
+                @include screen ('sm', 'max') {
+                    top: auto;
+                    right: auto;
+                    bottom: 100%;
+                    left: 30px;
+                    margin-bottom: -8px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        
+        &__bottom {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+
+          
+        }
+          // @include screen ('xll', 'max') {
+      
+        &__img {
+          &-wrap {
+            position: relative;
+            display: block;
+            margin: 0;
+            overflow: hidden;
+      
+            width: 80px;
+            height: 80px;
+      
+            background: $colorGreyLight;
+            border-radius: 50%;
+
+          }
+      
+          @include fill-img;
+          border-radius: 50%;     
+      
+        }
+      
+      
+      
+ 
+        &__text {
+          display: block;
+          flex-grow: 1;
+          margin: 0 0 10px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.4;
+          color: $colorGreyDark;
+
+          @include screen ('sm', 'max') {
+              font-size: 12px;
+          }
+        }
+
+        &__link {
+            &-wrap {
+                display: flex;
+                justify-content: flex-end;
+                margin: 0 0 12px;
+            }
+
+            font-size: 12px;
+            text-decoration: underline;
+            color: $colorRed;
+            transition: color 0.2s;
+
+            @include hover{
+                text-decoration: none;
+            }
+
+
+        }
+
+        &__title {
+            position: relative;
+            display: block;
+            margin: 0 0 2px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.5;
+            color: $colorBlack;
+          }
+        &__post {
+            position: relative;
+            display: block;
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.5;
+            color: $colorGrey;
+          }
+      
+      
+      
+      }
+
+    &__slider {
+        &-wrap {
+            margin: 0 0 40px;
+
+            @include screen ('lg', 'max') {
+                margin-bottom: 10px;
+            }
+            @include screen ('sm', 'max') {
+                margin-bottom: 0px;
+            }
+        }
+        
+        margin: -30px -15px 0 ;
+
+        @include screen ('xl', 'max') {
+            margin: -40px -10px 0 ;
+        }
+        @include screen ('lg', 'max') {
+            margin: -40px -30px 0 ;
+        }
+        // @include screen ('sm', 'max') {
+        //     margin: 0;
+        // }
+        .slick-list {
+            overflow: visible;
+
+            @include screen ('lg', 'max') {
+                overflow: hidden;
+            }
+        }
+    
+
+        &-item {
+           
+            display: flex;
+            padding: 30px 15px 0;
+            
+            @include screen ('xl', 'max') {
+                padding: 40px 10px 30px;
+            }
+            @include screen ('lg', 'max') {
+                padding: 40px 30px 30px;
+            }
+            transition: opacity 0.3s;
+            
+            
+            &.slick-slide:not(.slick-active) {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            @include screen ('sm', 'max') {
+                // width: 100%;
+                // padding: 0;
+
+                &:not(.slick-slide):not(:first-child) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    &__bottom {
+        .is-slider-init & {
+            display: flex;
+        }
+
+        @include screen ('xl', 'max') {
+            position: relative;
+            margin-top: -10px;
+            z-index: 2;
+        }
+       
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        &-right {
+            margin-left: 30px;
+        }
+    }
+}
+
+.p-hr {
+    // background: #E5E5E5;
+}
+
+
+.hr-review-popup {
+
+    &__title {
+        margin: 0 0 50px;
+        display: flex;
+        justify-content: center;
+
+        @include screen ('sm', 'max') {
+            margin-bottom: 40px;
+        }
+    }
+        
+    &__top {
+        display: flex;
+        align-items: center;
+        margin: 0 0 32px;
+        
+
+        @include screen ('sm', 'max') {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        &-left {
+            width: 100px;
+            min-width: 100px;
+            margin-right: 30px;
+
+            @include screen ('sm', 'max') {
+                margin: 0 0 15px;
+            }
+            
+        }
+        &-right {
+            position: relative;
+        }
+    }
+
+    
+
+    
+    &__img {
+        &-wrap {
+        position: relative;
+        display: block;
+        margin: 0;
+        overflow: hidden;
+    
+        width: 100px;
+        height: 100px;
+    
+        background: $colorGreyLight;
+        border-radius: 50%;
+
+        }
+    
+        @include fill-img;
+        border-radius: 50%;     
+    
+    }
+    
+    
+    
+
+    &__text {
+        display: block;
+        flex-grow: 1;
+        margin: 0 0 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.45;
+        color: $colorGreyDark;
+
+        @include screen ('sm', 'max') {
+            font-size: 12px;
+        }
+    }
+
+    &__name {
+        position: relative;
+        display: block;
+        margin: 0 0 2px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        color: $colorBlack;
+
+        @include screen ('sm', 'max') {
+            font-size: 16px;
+        }
+    }
+    &__post {
+        position: relative;
+        display: block;
+        margin: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $colorGrey;
+
+        @include screen ('sm', 'max') {
+            font-size: 12px;
+        }
+      }
+}
+
+.s-hr-team {
+    padding: 60px 0;
+    background: #ffffff;
+
+    @include screen ('sm', 'max') { 
+        padding: 35px 0 70px;
+    }
+
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include screen ('lg', 'max') {
+            flex-direction: column;
+        }
+
+        &-left {
+            width: 482px;
+
+            @include screen ('xl', 'max') {
+                width: 382px;
+            }
+            @include screen ('lg', 'max') {
+                width: 100%;
+                margin: 0 0 25px;
+            }
+        }
+
+        &-right {
+            width: 51%;
+
+            @include screen ('xl', 'max') {
+                width: 55%;
+            }
+            @include screen ('lg', 'max') {
+                width: 100%;
+            }
+        }
+    }
+    &__title {
+        margin: 0 0 33px;
+
+        @include screen ('sm', 'max') {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__text {
+        color: $colorGreyDark;
+        font-size: 16px;
+        line-height: 1.4;
+
+        @include screen ('lg', 'max') {
+            font-size: 14px;
+        }
+    }
+
+    &__video {
+        @extend .video;
+    }
+
+}
+
+
+
+.hr-resume-popup {
+
+
+    &__title {
+        margin: 0 0 50px;
+        display: flex;
+        justify-content: center;
+
+        @include screen ('sm', 'max') {
+            margin-bottom: 40px;
+        }
+    }
+        
+    &__text {
+        display: block;
+        margin: 0 0 40px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.45;
+        text-align: center;
+        color: $colorGreyDark;
+
+        @include screen ('sm', 'max') {
+            font-size: 12px;
+        }
+    }
+
+    &__fields {
+        margin: 0 0 20px;
+        &-row {
+            margin: -20px -15px 0;
+        }
+
+        &-col {
+            padding: 20px 15px 0;
+        }
+    }
+
+    &__file {
+        margin: 0 0 10px;
+    }
+    &__note {
+        margin: 0 0 20px;
+        font-size: 11px;
+        color: $colorGrey
+    }
+    &__agree {
+        margin: 0 0 30px;
+    }
+    &__submit {
+        &-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        min-width: 240px;
+
+        @include screen ('sm', 'max') {
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+
+.popup {
+  
+    &--hr-review {
+        width: 600px;
+        background: #FFFFFF;
+        padding: 32px 44px;
+
+        box-shadow: 4px 6px 40px rgba(13, 13, 34, 0.25);
+        border-radius: 10px;
+  
+      &.fancybox-content {
+        display: inline-block !important;
+      }
+  
+      @include screen ('md', 'max') {
+        width: 100%;
+      }
+      @include screen ('sm', 'max') {
+        padding: 50px 20px 40px;
+      }
+     
+    }
+
+    &--hr-resume {
+        width: 640px;
+        background: #FFFFFF;
+        padding: 51px 66px 40px;
+
+        box-shadow: 4px 6px 40px rgba(13, 13, 34, 0.25);
+        border-radius: 10px;
+  
+      &.fancybox-content {
+        display: inline-block !important;
+      }
+  
+      @include screen ('md', 'max') {
+        width: 100%;
+      }
+      @include screen ('sm', 'max') {
+        padding: 40px 20px 26px;
+      }
+     
+    }
+}
+

@@ -1,0 +1,277 @@
+
++b.cookies-msg(style="display: none;")
+    +e.container.container
+        +e.text.text
+            p
+                | Продолжая просмотр сайта и(или) нажимая
+                +e.I.icon-close.--text
+                    +icon('close')
+                | , я соглашаюсь с использованием файлов cookie владельцем сайта в соответствии с 
+                a(href="/mediafiles/MediaFiles/0/B//{0B9E8C81-17AB-4050-85FC-259D3D2E310D}cookie_policy.pdf") Политикой в отношении файлов cookie 
+                | в том числе на передачу данных, указанных в Политике, третьим лицам (статистическим службам сети Интернет), в соответствии с 
+                a(href="https://www.huawei.com/ru/legal" target="_blank" rel="noopener")
+                    | Пользовательским соглашением
+                    +e.I.icon-more
+                        +icon('arrow-right-more')
+
+        +e.BUTTON.close.js-cookies-msg-close(type="button" title="close")
+            +e.I.icon-close
+                +icon('close')
+
+
++b.top-panel
+    +e.top
+        +e.top-container.container
+            +e.top-links
+                +b.A.top-links-trigger.js-top-links-trigger(href="#")
+                    +e.SPAN.icon
+                        +icon('linksgroup')
+                    +e.SPAN.text
+                        | Huawei Россия
+                    +e.SPAN.arrow
+                        +icon('arrow-down')
+
+            +e.top-language
+                +b.A.top-language-trigger.js-top-language-trigger(href="#")
+                    +e.SPAN.icon
+                        +icon('globus')
+                    +e.SPAN.text
+                        | Русский (Россия)
+                    +e.SPAN.arrow
+                        +icon('arrow-down')
+
+    +e.content
+        +b.top-links
+            +e.inner
+                +e.container.container
+                    +e.back
+                        +b.BUTTON.mobile-menu-back(type="button").js-top-links-trigger
+                            +e.SPAN.arrow
+                                +icon('arrow-left')
+                            +e.SPAN.text Вернуться в меню
+
+                    +e.title Huawei Website Group
+
+                    +e.UL.list
+                        +e.LI.item
+                            +e.item-top
+                                +e.SPAN.item-link.is-current
+                                    +e.SPAN.item-arrow.--before
+                                        +icon('arrow-right-bolder')
+                                    +e.SPAN.item-link-text
+                                        | Корпоративный сайт
+                            +e.item-text
+                                | О компании Huawei, пресса, события и многое другое
+                        +e.LI.item
+                            +e.item-top
+                                +e.A.item-link(href="https://shop.huawei.ru/" target="_blank" onclick="" rel="noopener")
+                                        +e.SPAN.item-link-text
+                                            | Интернет-магазин
+                                        +e.SPAN.item-arrow
+                                            +icon('arrow-right-bolder')
+                            +e.item-text
+                                | Смартфоны, планшеты, носимые устройства и многое другое
+                        +e.LI.item
+                            +e.item-top
+                                +e.A.item-link(href="http://e.huawei.com/ru" target="_blank" onclick="" rel="noopener")
+                                    +e.SPAN.item-link-text
+                                        | Для предприятий
+                                    +e.SPAN.item-arrow
+                                        +icon('arrow-right-bolder')
+                            +e.item-text
+                                | Продукты, решения и услуги для предприятий
+                        +e.LI.item
+                            +e.item-top
+                                +e.A.item-link(href="http://carrier.huawei.com/en" target="_blank" onclick="" rel="noopener")
+                                    +e.SPAN.item-link-text
+                                        | Для операторов
+                                    +e.SPAN.item-arrow
+                                        +icon('arrow-right-bolder')
+                            +e.item-text
+                                | Продукты, решения и услуги для операторов
+
+        +b.languages
+            +e.inner
+                +e.container.container
+                    +e.back
+                        +b.BUTTON.mobile-menu-back(type="button").js-top-language-trigger
+                            +e.SPAN.arrow
+                                +icon('arrow-left')
+                            +e.SPAN.text Вернуться в меню
+
+                    +e.title Выберите страну или регион
+
+                    +e.UL.list
+                        +e.LI.item
+                            +e.SPAN.item-country Australia 
+                            | -
+                            +e.A.item-link(href="/au/" onclick="ga('send', 'event', 'header', 'worldwide', '/au/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country Belarus 
+                            | -
+                            +e.A.item-link(href="/by/" onclick="ga('send', 'event', 'header', 'worldwide', '/by/');") Pусский
+                        +e.LI.item
+                            +e.SPAN.item-country Brazil 
+                            | -
+                            +e.A.item-link(href="/br/" onclick="ga('send', 'event', 'header', 'worldwide', '/br/');") Portuguese
+                        +e.LI.item
+                            +e.SPAN.item-country Canada 
+                            | -
+                            +e.A.item-link(href="/ca/" onclick="ga('send', 'event', 'header', 'worldwide', '/ca/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country China 
+                            | -
+                            +e.A.item-link(href="/cn/" onclick="ga('send', 'event', 'header', 'worldwide', '/cn/');") 简体中文
+                        +e.LI.item
+                            +e.SPAN.item-country France 
+                            | -
+                            +e.A.item-link(href="/fr/" onclick="ga('send', 'event', 'header', 'worldwide', '/fr/');") Français
+                        +e.LI.item
+                            +e.SPAN.item-country Germany 
+                            | -
+                            +e.A.item-link(href="/de/" onclick="ga('send', 'event', 'header', 'worldwide', '/de/');") Deutsch
+                        +e.LI.item
+                            +e.SPAN.item-country Italy 
+                            | -
+                            +e.A.item-link(href="/it/" onclick="ga('send', 'event', 'header', 'worldwide', '/it/');") Italiano
+                        +e.LI.item
+                            +e.SPAN.item-country Japan 
+                            | -
+                            +e.A.item-link(href="/jp/" onclick="ga('send', 'event', 'header', 'worldwide', '/jp/');") 日本語
+                        +e.LI.item
+                            +e.SPAN.item-country Kazakstan 
+                            | -
+                            +e.A.item-link(href="/kz/" onclick="ga('send', 'event', 'header', 'worldwide', '/kz/');") русский
+                        +e.LI.item
+                            +e.SPAN.item-country Kenya 
+                            | -
+                            +e.A.item-link(href="/ke/" onclick="ga('send', 'event', 'header', 'worldwide', '/ke/');") English
+                        +e.LI.item
+                            +e.SPAN.item-country Malaysia 
+                            | -
+                            +e.A.item-link(href="/my/" onclick="ga('send', 'event', 'header', 'worldwide', '/my/');") English
+                        +e.LI.item
+                            +e.SPAN.item-country Mexico 
+                            | -
+                            +e.A.item-link(href="/mx/" onclick="ga('send', 'event', 'header', 'worldwide', '/mx/');") Español
+                        +e.LI.item
+                            +e.SPAN.item-country Myanmar 
+                            | -
+                            +e.A.item-link(href="/mm/" onclick="ga('send', 'event', 'header', 'worldwide', '/mm/');") ျမန္မာ
+                        +e.LI.item
+                            +e.SPAN.item-country New Zealand 
+                            | -
+                            +e.A.item-link(href="/nz/" onclick="ga('send', 'event', 'header', 'worldwide', '/nz/');") English
+                        +e.LI.item
+                            +e.SPAN.item-country Netherlands 
+                            | -
+                            +e.A.item-link(href="/nl/") Dutch
+                        +e.LI.item.is-current
+                            +e.SPAN.item-arrow
+                                +icon('arrow-right-bolder')
+                            +e.SPAN.item-country Russia 
+                            | -
+                            +e.A.item-link(href="/ru/") русский
+                        +e.LI.item
+                            +e.SPAN.item-country South Africa 
+                            | -
+                            +e.A.item-link(href="/za/" onclick="ga('send', 'event', 'header', 'worldwide', '/za/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country Spain 
+                            | -
+                            +e.A.item-link(href="/es/" onclick="ga('send', 'event', 'header', 'worldwide', '/es/');") Español
+                        +e.LI.item
+                            +e.SPAN.item-country Switzerland 
+                            | -
+                            +e.A.item-link(href="/ch-en/" onclick="ga('send', 'event', 'header', 'worldwide', '/ch-en/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country Thailand 
+                            | -
+                            +e.A.item-link(href="/th/" onclick="ga('send', 'event', 'header', 'worldwide', '/th/');") ภาษาไทย
+                        +e.LI.item
+                            +e.SPAN.item-country Turkey 
+                            | -
+                            +e.A.item-link(href="/tr/" onclick="ga('send', 'event', 'header', 'worldwide', '/tr/');") Türkiye
+                        +e.LI.item
+                            +e.SPAN.item-country Ukraine 
+                            | -
+                            +e.A.item-link(href="/ua/" onclick="ga('send', 'event', 'header', 'worldwide', '/ua/');") Українська 
+                        +e.LI.item
+                            +e.SPAN.item-country United Kingdom 
+                            | -
+                            +e.A.item-link(href="/uk/" onclick="ga('send', 'event', 'header', 'worldwide', '/uk/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country United States 
+                            | -
+                            +e.A.item-link(href="/us/" onclick="ga('send', 'event', 'header', 'worldwide', '/us/');") English 
+                        +e.LI.item
+                            +e.SPAN.item-country Uzbekistan 
+                            | -
+                            +e.A.item-link(href="/uz/" onclick="ga('send', 'event', 'header', 'worldwide', '/uz/');") русский 
+                        +e.LI.item
+                            +e.SPAN.item-country Uzbekistan 
+                            | -
+                            +e.A.item-link(href="/uz-uz/" onclick="ga('send', 'event', 'header', 'worldwide', '/uz-uz/');") O’zbek 
+                        +e.LI.item
+                            +e.SPAN.item-country Vietnam 
+                            | -
+                            +e.A.item-link(href="/vn/" onclick="ga('send', 'event', 'header', 'worldwide', '/vn/');") Tiếng Việt
+                        +e.LI.item
+                            +e.SPAN.item-country Global
+                            | -
+                            +e.A.item-link(href="/en/" onclick="ga('send', 'event', 'header', 'worldwide', '/en/');") English
+
+
+mixin headerSearch()
+    +b.header-search-form
+        form(action="#" method="post")
+            +e.SPAN.input
+                +e.INPUT.input-field.input-text.--geom-def(type="search" placeholder="Поисковая фраза")
+            +e.BUTTON.__submit(type="submit")
+                +icon('search')
+        +e.BUTTON.__close.js-header-search-trigger(type="button")
+            +icon('close')
+
+
+mixin headerLogo()
+    +b.A.header-logo(href="#")&attributes(attributes)
+        +e.inner
+            +e.IMG.img(src="/img/logo.svg")
+
+
+mixin header-nav()
+    +b.NAV.header-nav&attributes(attributes)
+        +e.UL.list
+            +e.LI.item
+                +e.A.link(href="#") В центре внимания
+            +e.LI.item
+                +e.A.link(href="#") Основные моменты
+            +e.LI.item
+                +e.A.link(href="#") О Huawei
+
+
+
++b.HEADER.header
+    .container
+        +e.row.row
+            +e.col.--logo.col-auto
+                +headerLogo()
+            +e.col.--nav.col-auto
+                +e.nav
+                    +header-nav
+
+            +e.col.--links.col-auto
+                .row
+                    +e.col.--search.col-auto
+                        +e.search
+                            +e.search-icon
+                                +b.A.header-search.js-header-search-trigger(href="search.html")
+                                    +e.icon
+                                        +icon('search')
+
+                            +e.search-form
+                                +headerSearch()
+                    // +e.col.--profile.col-auto
+                    //     +b.A.header-profile(href="#")
+                    //         +e.icon
+                    //             +icon('log-in')
